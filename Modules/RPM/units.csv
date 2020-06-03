@@ -126,8 +126,6 @@ stock solid cube meter;Vfm;;volume;Unknown;double;variable;1,00E+00;
 stock solid cube meter per hectare;Vfm/ha;;volume per area;Unknown;double;variable;1,00E-04;Vorratsfestmeter: 1 fm = 1 m^3
 centimeter per second;cm/s;;length per time;Metric;double;variable;1,00E-02;
 event count;eventcount;;Count;Metric;number;variable;1;
-
-
 day;day;;time;IS;number;variable;1,00E-02;
 week;wk;;time;IS;number;variable;1,00E-02;
 kilogram per square meter;kg/m^[2];;Area Density;Area density;number decimal;variable;1,00E-02;
