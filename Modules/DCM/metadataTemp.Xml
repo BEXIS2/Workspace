@@ -12,7 +12,7 @@
       <TechnicalContact type="MetadataAttributeUsage" name="TechnicalContact" id="2">
         <MicroAgentP type="MetadataAttribute" name="MicroAgentP" roleId="2" id="6" number="1">
           <Name type="MetadataAttributeUsage" name="Name" id="1">
-            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1">Terminator</NameType>
+            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1" />
           </Name>
           <Email type="MetadataAttributeUsage" name="Email" id="2">
             <EmailType type="MetadataAttribute" name="EmailType" roleId="2" id="3" number="1" />
@@ -32,7 +32,7 @@
       <ContentContact type="MetadataAttributeUsage" name="ContentContact" id="3">
         <MicroAgentP type="MetadataAttribute" name="MicroAgentP" roleId="3" id="6" number="1">
           <Name type="MetadataAttributeUsage" name="Name" id="1">
-            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1">Doctor Who</NameType>
+            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1" />
           </Name>
           <Email type="MetadataAttributeUsage" name="Email" id="2">
             <EmailType type="MetadataAttribute" name="EmailType" roleId="2" id="3" number="1" />
@@ -61,7 +61,7 @@
           <Representation type="MetadataAttributeUsage" name="Representation" id="9">
             <MetadataDescriptionRepr type="MetadataAttribute" name="MetadataDescriptionRepr" roleId="9" id="12" number="1">
               <Title type="MetadataAttributeUsage" name="Title" id="5">
-                <TitleType type="MetadataAttribute" name="TitleType" roleId="5" id="8" number="1" />
+                <TitleType type="MetadataAttribute" name="TitleType" roleId="5" id="8" number="1">sdfsdfs</TitleType>
               </Title>
               <Details type="MetadataAttributeUsage" name="Details" id="6">
                 <DetailsType type="MetadataAttribute" name="DetailsType" roleId="6" id="9" number="1" />
