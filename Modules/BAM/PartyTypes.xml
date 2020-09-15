@@ -11,7 +11,7 @@ the attribute and all values that were collected for this attribute in the datab
 	<PartyTypes>
 		<PartyType Name="Person" >
 			<Attribute Name="FirstName" DisplayName="First Name" type="String" isValueOptional="false" isMain="true"/>
-			<Attribute Name="LastName" DisplayName="Last Name" isValueOptional="false" isMain="true" />
+			<Attribute Name="LastName" DisplayName="Last Name" type="String" isValueOptional="false" isMain="true" />
 			<Attribute Name="Email" type="String" />
 			<Attribute Name="Phone" type="String" />
 			<Attribute Name="Mobile" type="String" />
