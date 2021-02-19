@@ -1,17 +1,17 @@
 <config>
 <referenceTypes>
-    <referenceType description="">IsSupplementTo</referenceType>
-    <referenceType description="">IsSupplementedBy</referenceType>
-    <referenceType description="">IsNewVersionOf</referenceType>
-    <referenceType description="">IsPreviousVersionOf</referenceType>
-    <referenceType description="">IsContinuedBy</referenceType>
-    <referenceType description="">Continues</referenceType>
-    <referenceType description="">IsDerivedFrom</referenceType>
-    <referenceType description="">IsSourceOf</referenceType>
-    <referenceType description="">Compiles</referenceType>
-    <referenceType description="">IsCompiledBy </referenceType>
-    <referenceType description="">Collection</referenceType>
-    <referenceType description="">Link</referenceType>
+     <referenceType description="linked dataset is used in the current publication (only to link publication and dataset)">IsSupplementTo</referenceType>
+    <referenceType description="linked publication uses the current dataset (only to link dataset and publication)">IsSupplementedBy</referenceType>
+    <referenceType description="linked dataset is a newer version of the current dataset">IsNewVersionOf</referenceType>
+    <referenceType description="linked dataset is an older version of the current dataset">IsPreviousVersionOf</referenceType>
+    <referenceType description="indicates that the current dataset is continued by the linked dataset (e.g., for time series)">IsContinuedBy</referenceType>
+    <referenceType description="indicates that the current dataset continues by the linked dataset (e.g., for time series)">Continues</referenceType>
+    <referenceType description="linked dataset is a source upon which the current dataset is based">IsDerivedFrom</referenceType>
+    <referenceType description="the original dataset is the source of the linked dataset">IsSourceOf</referenceType>
+    <referenceType description="linked dataset (e.g., synthesis datasets) is the result of a compile or creation event using the current dataset">Compiles</referenceType>
+    <referenceType description="linked dataset is used to compile or create the current dataset (e.g., synthesis datasets)">IsCompiledBy </referenceType>
+    <referenceType description="linked dataset is part of a collection (e.g., header data and species data)">Collection</referenceType>
+    <referenceType description="unspecific link to a dataset or publication">Link</referenceType>
 </referenceTypes>
 <!--Whitelistfor entity types. Please configure, if you need to hide entities from the list
 <entityTypes>
