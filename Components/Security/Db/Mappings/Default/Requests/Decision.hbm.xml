@@ -13,6 +13,7 @@
       <column name="Extra" not-null="false" sql-type="xml" />
     </property>
 
+
     <property name="DecisionDate" type="DateTime">
       <column name="DecisionDate" />
     </property>
