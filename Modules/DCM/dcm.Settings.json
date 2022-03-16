@@ -1,1 +1,45 @@
-{"id":"dcm","Name":"data collection","Description":"...","Entry":[{"Key":"help","Value":"https://github.com/BEXIS2/Documents/blob/2.14.5/Manuals/DCM/Manual.md","Type":"String","Description":"URL to manual","Selection":null,"Item":null},{"Key":"celllimit","Value":100000,"Type":"Int32","Description":"This number of cells determines the selection whether an upload of structured data should be executed directly or async. ","Selection":null,"Item":null},{"Key":"fileuploadDescription","Value":"active","Type":"selection","Description":"If it is activated, it is possible to add a description text per file.","Selection":["none","active","required"],"Item":null},{"Key":"allowMultiFileupload","Value":false,"Type":"Boolean","Description":"Allow multiple files to be uploaded at the same time","Selection":null,"Item":null},{"Key":"attachmentDescription","Value":"active","Type":"selection","Description":"If it is activated, it is possible to add a description text per file.","Selection":["none","active","required"],"Item":null},{"Key":"allowMultiAttachmentUpload","Value":"true","Type":"Boolean","Description":"Allow multiple files to be uploaded at the same time.","Selection":null,"Item":null}]}
+{
+  "id": "dcm",
+  "name": "data collection",
+  "description": "...",
+  "entry": [
+    {
+      "key": "help",
+      "value": "https://github.com/BEXIS2/Documents/blob/2.14.5/Manuals/DCM/Manual.md",
+      "type": "String",
+      "description": "URL to manual"
+    },
+    {
+      "key": "celllimit",
+      "value": 100000,
+      "type": "Int32",
+      "description": "This number of cells determines the selection whether an upload of structured data should be executed directly or async. "
+    },
+    {
+      "key": "fileuploadDescription",
+      "value": "none",
+      "type": "selection",
+      "description": "If it is activated, it is possible to add a description text per file.",
+      "selection": [ "none", "active", "required" ]
+    },
+    {
+      "key": "allowMultiFileupload",
+      "value": "true",
+      "type": "Boolean",
+      "description": "Allow multiple files to be uploaded at the same time"
+    },
+    {
+      "key": "attachmentDescription",
+      "value": 0,
+      "type": "selection",
+      "description": "If it is activated, it is possible to add a description text per file.",
+      "selection": [ "none", "active", "required" ]
+    },
+    {
+      "key": "allowMultiAttachmentUpload",
+      "value": "true",
+      "type": "Boolean",
+      "description": "Allow multiple files to be uploaded at the same time."
+    }
+  ]
+}
