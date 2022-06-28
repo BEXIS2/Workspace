@@ -34,5 +34,20 @@
 				</dataRepo>
 			</dataRepos>
 		</broker>
+		<broker>
+			<name>DOI</name>
+			<metadatastandard></metadatastandard>
+			<primarydataformat></primarydataformat>
+			<server></server>
+			<user></user>
+			<password></password>
+			<link></link>
+			<dataRepos>
+				<dataRepo>
+					<name>DOI</name>
+					<url></url>
+				</dataRepo>
+			</dataRepos>
+		</broker>
 	</brokers>
 </publishTo>
