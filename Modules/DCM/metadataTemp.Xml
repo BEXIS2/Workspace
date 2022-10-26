@@ -30,18 +30,18 @@
   <ContentContacts type="MetadataPackageUsage" name="ContentContacts" id="3">
     <ContentContactsType type="MetadataPackage" name="ContentContactsType" roleId="3" id="3" number="1">
       <ContentContact type="MetadataAttributeUsage" name="ContentContact" id="3">
-        <MicroAgentP type="MetadataAttribute" name="MicroAgentP" roleId="3" id="6" number="1">
+        <MicroAgentP type="MetadataAttribute" name="MicroAgentP" roleId="3" id="6" number="1" partyid="1">
           <Name type="MetadataAttributeUsage" name="Name" id="1">
-            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1" />
+            <NameType type="MetadataAttribute" name="NameType" roleId="1" id="2" number="1">David Schöne</NameType>
           </Name>
           <Email type="MetadataAttributeUsage" name="Email" id="2">
-            <EmailType type="MetadataAttribute" name="EmailType" roleId="2" id="3" number="1" />
+            <EmailType type="MetadataAttribute" name="EmailType" roleId="2" id="3" number="1"></EmailType>
           </Email>
           <Phone type="MetadataAttributeUsage" name="Phone" id="3">
-            <PhoneType type="MetadataAttribute" name="PhoneType" roleId="3" id="4" number="1" />
+            <PhoneType type="MetadataAttribute" name="PhoneType" roleId="3" id="4" number="1">01608037788</PhoneType>
           </Phone>
           <Address type="MetadataAttributeUsage" name="Address" id="4">
-            <AddressType type="MetadataAttribute" name="AddressType" roleId="4" id="5" number="1" />
+            <AddressType type="MetadataAttribute" name="AddressType" roleId="4" id="5" number="1">Von der Gabelentz Straße 9 erfurt 99089 Deutschland</AddressType>
           </Address>
         </MicroAgentP>
       </ContentContact>
@@ -61,7 +61,7 @@
           <Representation type="MetadataAttributeUsage" name="Representation" id="9">
             <MetadataDescriptionRepr type="MetadataAttribute" name="MetadataDescriptionRepr" roleId="9" id="12" number="1">
               <Title type="MetadataAttributeUsage" name="Title" id="5">
-                <TitleType type="MetadataAttribute" name="TitleType" roleId="5" id="8" number="1">dataset for a better world</TitleType>
+                <TitleType type="MetadataAttribute" name="TitleType" roleId="5" id="8" number="1">asdadsd</TitleType>
               </Title>
               <Details type="MetadataAttributeUsage" name="Details" id="6">
                 <DetailsType type="MetadataAttribute" name="DetailsType" roleId="6" id="9" number="1" />
@@ -125,7 +125,7 @@
             <DateCreatedType type="MetadataAttribute" name="DateCreatedType" roleId="20" id="27" number="1" />
           </DateCreated>
           <DateModified type="MetadataAttributeUsage" name="DateModified" id="21">
-            <DateModifiedType type="MetadataAttribute" name="DateModifiedType" roleId="21" id="28" number="1" />
+            <DateModifiedType type="MetadataAttribute" name="DateModifiedType" roleId="21" id="28" number="1">2022-10-04</DateModifiedType>
           </DateModified>
         </RevisionData>
       </RevisionData>
@@ -161,7 +161,7 @@
               <Person type="MetadataAttributeUsage" name="Person" id="45">
                 <PersonName type="MetadataAttribute" name="PersonName" roleId="45" id="45" number="1">
                   <FullName type="MetadataAttributeUsage" name="FullName" id="33">
-                    <FullNameType type="MetadataAttribute" name="FullNameType" roleId="33" id="37" number="1">hans joachricm hjasjkh husten kopf</FullNameType>
+                    <FullNameType type="MetadataAttribute" name="FullNameType" roleId="33" id="37" number="1" />
                   </FullName>
                   <SortingName type="MetadataAttributeUsage" name="SortingName" id="34">
                     <SortingNameType type="MetadataAttribute" name="SortingNameType" roleId="34" id="38" number="1" />
