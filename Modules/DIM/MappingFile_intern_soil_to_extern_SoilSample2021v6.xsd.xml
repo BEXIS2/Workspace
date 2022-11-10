@@ -1,0 +1,286 @@
+<mapping name="soil">
+  <header>
+    <destination namespaceUri="" prefix="Metadata" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="soil" url="Metadata/soil/SoilSample2021v6.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="Metadata/Contact/ContactType/Name/NameType" />
+      <destination xPath="Metadata/Contact/Name" sequence="Contact" />
+    </route>
+    <route>
+      <source xPath="Metadata/Contact/ContactType/Email/EmailType" />
+      <destination xPath="Metadata/Contact/Email" sequence="Contact" />
+    </route>
+    <route>
+      <source xPath="Metadata/Contact/ContactType/Phone/PhoneType" />
+      <destination xPath="Metadata/Contact/Phone" sequence="Contact" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Owner/ownerType/Name/NameType" />
+      <destination xPath="Metadata/Ownership/Owner/Name" sequence="Owner" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Owner/ownerType/Email/EmailType" />
+      <destination xPath="Metadata/Ownership/Owner/Email" sequence="Owner" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Owner/ownerType/Phone/PhoneType" />
+      <destination xPath="Metadata/Ownership/Owner/Phone" sequence="Owner" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Name/NameType" />
+      <destination xPath="Metadata/Ownership/Organisation/Name" sequence="Organisation" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Abbreviation/AbbreviationType" />
+      <destination xPath="Metadata/Ownership/Organisation/Abbreviation" sequence="Organisation" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/URL/URLType" />
+      <destination xPath="Metadata/Ownership/Organisation/URL" sequence="Organisation" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Address/addressType/Street/StreetType" />
+      <destination xPath="Metadata/Ownership/Organisation/Address/Street" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Address/addressType/Zipcode/ZipcodeType" />
+      <destination xPath="Metadata/Ownership/Organisation/Address/Zipcode" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Address/addressType/City/CityType" />
+      <destination xPath="Metadata/Ownership/Organisation/Address/City" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Organisation/organisationType/Address/addressType/Country/CountryType" />
+      <destination xPath="Metadata/Ownership/Organisation/Address/Country" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Name/NameType" />
+      <destination xPath="Metadata/Ownership/Institute/Name" sequence="Institute" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Abbreviation/AbbreviationType" />
+      <destination xPath="Metadata/Ownership/Institute/Abbreviation" sequence="Institute" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/URL/URLType" />
+      <destination xPath="Metadata/Ownership/Institute/URL" sequence="Institute" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Address/addressType/Street/StreetType" />
+      <destination xPath="Metadata/Ownership/Institute/Address/Street" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Address/addressType/Zipcode/ZipcodeType" />
+      <destination xPath="Metadata/Ownership/Institute/Address/Zipcode" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Address/addressType/City/CityType" />
+      <destination xPath="Metadata/Ownership/Institute/Address/City" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Institute/instituteType/Address/addressType/Country/CountryType" />
+      <destination xPath="Metadata/Ownership/Institute/Address/Country" sequence="Address" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Project/projectType/Name/NameType" />
+      <destination xPath="Metadata/Ownership/Project/Name" sequence="Project" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Project/projectType/Acronym/AcronymType" />
+      <destination xPath="Metadata/Ownership/Project/Acronym" sequence="Project" />
+    </route>
+    <route>
+      <source xPath="Metadata/Ownership/OwnershipType/Project/projectType/Funder/FunderType" />
+      <destination xPath="Metadata/Ownership/Project/Funder" sequence="Project" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/Name/NameType" />
+      <destination xPath="Metadata/SampleLocation/Site/Name" sequence="Site" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/Abbreviation/AbbreviationType" />
+      <destination xPath="Metadata/SampleLocation/Site/Abbreviation" sequence="Site" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/BoundingBox/boundingBoxType/EasternLongtiude/EasternLongtiudeType" />
+      <destination xPath="Metadata/SampleLocation/Site/BoundingBox/EasternLongtiude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/BoundingBox/boundingBoxType/WesternLongtiude/WesternLongtiudeType" />
+      <destination xPath="Metadata/SampleLocation/Site/BoundingBox/WesternLongtiude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/BoundingBox/boundingBoxType/NorthernLaditude/NorthernLaditudeType" />
+      <destination xPath="Metadata/SampleLocation/Site/BoundingBox/NorthernLaditude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Site/siteType/BoundingBox/boundingBoxType/SouthernLaditude/SouthernLaditudeType" />
+      <destination xPath="Metadata/SampleLocation/Site/BoundingBox/SouthernLaditude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/Name/NameType" />
+      <destination xPath="Metadata/SampleLocation/Plot/Name" sequence="Plot" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/Abbreviation/AbbreviationType" />
+      <destination xPath="Metadata/SampleLocation/Plot/Abbreviation" sequence="Plot" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/GroundwaterDepth/GroundwaterDepthType" />
+      <destination xPath="Metadata/SampleLocation/Plot/GroundwaterDepth" sequence="Plot" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/Vegetation/VegetationType" />
+      <destination xPath="Metadata/SampleLocation/Plot/Vegetation" sequence="Plot" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/Coordinates/coordinatesType/Longtitude/LongtitudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/Coordinates/Longtitude" sequence="Coordinates" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/Coordinates/coordinatesType/Laditude/LaditudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/Coordinates/Laditude" sequence="Coordinates" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/BoundingBox/boundingBoxType/EasternLongtiude/EasternLongtiudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/BoundingBox/EasternLongtiude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/BoundingBox/boundingBoxType/WesternLongtiude/WesternLongtiudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/BoundingBox/WesternLongtiude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/BoundingBox/boundingBoxType/NorthernLaditude/NorthernLaditudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/BoundingBox/NorthernLaditude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleLocation/SampleLocationType/Plot/plotType/BoundingBox/boundingBoxType/SouthernLaditude/SouthernLaditudeType" />
+      <destination xPath="Metadata/SampleLocation/Plot/BoundingBox/SouthernLaditude" sequence="BoundingBox" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Name/NameType" />
+      <destination xPath="Metadata/SampleType/Name" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Type/TypeType" />
+      <destination xPath="Metadata/SampleType/Type" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/SamplingType/SamplingTypeType" />
+      <destination xPath="Metadata/SampleType/SamplingType" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/SampleType/SampleTypeType" />
+      <destination xPath="Metadata/SampleType/SampleType" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Description/DescriptionType" />
+      <destination xPath="Metadata/SampleType/Description" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Comments/CommentsType" />
+      <destination xPath="Metadata/SampleType/Comments" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Sieved/SievedType" />
+      <destination xPath="Metadata/SampleType/Sieved" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Ground/GroundType" />
+      <destination xPath="Metadata/SampleType/Ground" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/AirDried/AirDriedType" />
+      <destination xPath="Metadata/SampleType/AirDried" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/DriedAtTemperature/DriedAtTemperatureType" />
+      <destination xPath="Metadata/SampleType/DriedAtTemperature" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/SamplingDate/SamplingDateType" />
+      <destination xPath="Metadata/SampleType/SamplingDate" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Vegetation/VegetationType" />
+      <destination xPath="Metadata/SampleType/Vegetation" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Status/StatusType" />
+      <destination xPath="Metadata/SampleType/Status" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/MixedSample/MixedSampleType" />
+      <destination xPath="Metadata/SampleType/MixedSample" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/PitSize/PitSizeType" />
+      <destination xPath="Metadata/SampleType/PitSize" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/TotalDepth/TotalDepthType" />
+      <destination xPath="Metadata/SampleType/TotalDepth" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/DepthRange/depthRangeType/Min/MinType" />
+      <destination xPath="Metadata/SampleType/DepthRange/Min" sequence="DepthRange" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/DepthRange/depthRangeType/Max/MaxType" />
+      <destination xPath="Metadata/SampleType/DepthRange/Max" sequence="DepthRange" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Weight/WeightType" />
+      <destination xPath="Metadata/SampleType/Weight" sequence="SampleType" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/OrganicLayer/organicLayerType/Information/InformationType" />
+      <destination xPath="Metadata/SampleType/Soil/OrganicLayer/Information" sequence="OrganicLayer" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/OrganicLayer/organicLayerType/OrganicLayerType/OrganicLayerTypeType" />
+      <destination xPath="Metadata/SampleType/Soil/OrganicLayer/OrganicLayerType" sequence="OrganicLayer" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/OrganicLayer/organicLayerType/Density/DensityType" />
+      <destination xPath="Metadata/SampleType/Soil/OrganicLayer/Density" sequence="OrganicLayer" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/MineralSoil/mineralSoilType/DepthInterval/DepthIntervalType" />
+      <destination xPath="Metadata/SampleType/Soil/MineralSoil/DepthInterval" sequence="MineralSoil" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/MineralSoil/mineralSoilType/Layer/mineralLayerType/Ground/GroundType" />
+      <destination xPath="Metadata/SampleType/Soil/MineralSoil/Layer/Ground" sequence="Layer" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/MineralSoil/mineralSoilType/Layer/mineralLayerType/Horizon/HorizonType" />
+      <destination xPath="Metadata/SampleType/Soil/MineralSoil/Layer/Horizon" sequence="Layer" />
+    </route>
+    <route>
+      <source xPath="Metadata/SampleType/SampleTypeType/Soil/soilType2/MineralSoil/mineralSoilType/Layer/mineralLayerType/Volume/VolumeType" />
+      <destination xPath="Metadata/SampleType/Soil/MineralSoil/Layer/Volume" sequence="Layer" />
+    </route>
+    <route>
+      <source xPath="Metadata/Archive/ArchiveType/SampleIsArchived/SampleIsArchivedType" />
+      <destination xPath="Metadata/Archive/SampleIsArchived" sequence="Archive" />
+    </route>
+    <route>
+      <source xPath="Metadata/Archive/ArchiveType/Room/RoomType" />
+      <destination xPath="Metadata/Archive/Room" sequence="Archive" />
+    </route>
+    <route>
+      <source xPath="Metadata/Archive/ArchiveType/Rack/RackType" />
+      <destination xPath="Metadata/Archive/Rack" sequence="Archive" />
+    </route>
+    <route>
+      <source xPath="Metadata/Archive/ArchiveType/Box/BoxType" />
+      <destination xPath="Metadata/Archive/Box" sequence="Archive" />
+    </route>
+  </routes>
+</mapping>

@@ -1,5 +1,5 @@
-﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Security.Entities" namespace="BExIS.Security.Entities.Versions">
-  <class xmlns="urn:nhibernate-mapping-2.2" name="Version" table="Versions" dynamic-update="true">
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Security.Entities" namespace="BExIS.Security.Entities.FormerMember">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="UsersGroupsRelationFormerMember" table="Users_Groups_FormerMember" dynamic-update="true">
 
     <id name="Id" type="Int64">
       <generator class="native" />
@@ -13,8 +13,7 @@
       <column name="Extra" not-null="false" sql-type="xml" />
     </property>
 
-    <property name="Module" type="String" />
-    <property name="Value" type="String" />
-    <property name="Date" type="DateTime" />
+    <property name="UserRef" type="Int64" />
+    <property name="GroupRef" type="Int64" />
   </class>
 </hibernate-mapping>
