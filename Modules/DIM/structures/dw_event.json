@@ -1,0 +1,25 @@
+{
+ "type": "occurrence",
+ "field":[
+   {
+    "index":1,
+    "term":"http://rs.tdwg.org/dwc/terms/eventID"
+   },
+   {
+    "index":2,
+    "term":"http://rs.tdwg.org/dwc/terms/eventDate"
+   },
+   {
+    "index":3,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingProtocol"
+   },
+   {
+    "index":4,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingSizeValue"
+   },
+   {
+    "index":5,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingSizeUnit"
+   }
+ ]
+}
