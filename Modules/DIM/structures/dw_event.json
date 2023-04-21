@@ -1,0 +1,29 @@
+{
+<<<<<<< HEAD
+ "type": "event",
+=======
+ "type": "occurrence",
+>>>>>>> 671ac10ddbb8b59383f61e3b45fa59238743fd44
+ "field":[
+   {
+    "index":1,
+    "term":"http://rs.tdwg.org/dwc/terms/eventID"
+   },
+   {
+    "index":2,
+    "term":"http://rs.tdwg.org/dwc/terms/eventDate"
+   },
+   {
+    "index":3,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingProtocol"
+   },
+   {
+    "index":4,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingSizeValue"
+   },
+   {
+    "index":5,
+    "term":"http://rs.tdwg.org/dwc/terms/samplingSizeUnit"
+   }
+ ]
+}
