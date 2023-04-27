@@ -1,0 +1,22 @@
+{
+                          
+ "type": "occurrence",
+ "field":[
+   {
+    "index":1,
+    "term":"http://rs.tdwg.org/dwc/terms/occurrenceID"
+   },
+   {
+    "index":2,
+    "term":"http://rs.tdwg.org/dwc/terms/basisOfRecord"
+   },
+   {
+    "index":3,
+    "term":"http://rs.tdwg.org/dwc/terms/scientificName"
+   },
+   {
+    "index":4,
+    "term":"http://rs.tdwg.org/dwc/terms/eventDate"
+   }
+ ]
+}
