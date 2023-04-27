@@ -1,5 +1,5 @@
 {
- "type": "event",
+ "type": "samplingEvent",
  "field":[
    {
     "index":1,
