@@ -1,11 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Modules>
   <!-- status is active, inactive, pending-->
-  <Module id="sam" status="active" order="1" />
+  <Module id="sam" status="active" order="1" path="BExIS.Modules.Sam.UI" />
   <Module id="ddm" status="active" order="2" />
-  <Module id="dcm" status="active" order="3"/>
-  <!-- <Module id="dcm" status="active" order="3" path="BExIS.Modules.Dcm.UI" /> -->
-  <!-- <Module id="rpm" status="active" order="4" path="BExIS.Modules.Rpm.UI" /> -->
+  <Module id="dcm" status="active" order="3" path="BExIS.Modules.Dcm.UI" />
+  <Module id="rpm" status="active" order="4" path="BExIS.Modules.Rpm.UI" />
   <Module id="bam" status="active" order="5" />
   <Module id="dim" status="active" order="6" />
   <Module id="vim" status="active" order="7" />
