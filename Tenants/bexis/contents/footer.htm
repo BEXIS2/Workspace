@@ -1,0 +1,33 @@
+<style>
+    img.desaturate {
+        filter: gray; /* IE6-9 */
+        filter: grayscale(1); /* Microsoft Edge and Firefox 35+ */
+        -webkit-filter: grayscale(1); /* Google Chrome, Safari 6+ & Opera 15+ */
+    }
+
+        img.desaturate:hover {
+            filter: none;
+            -webkit-filter: grayscale(0);
+        }
+
+     a:hover {
+      color: rgb(255 151 0);
+</style>
+
+<div id="footer" class="text-center">
+
+        Powered by
+        <br /><br />
+        <span>
+         <a href="http://bexis2.uni-jena.de" target="_blank">
+             <img src="/Content/Images/Logo_BEXIS_rgb_113x28.jpg" class="desaturate" />
+         </a>
+        </span>
+        <br /><br />
+        <div class="divide-x divide-dashed">
+         <a href="/footer/policy">Privacy Policy</a> |
+         <a href="/footer/termsandconditions">Terms and Conditions</a> |
+         <a href="/footer/Contact Us">Contact Us</a> |
+         <a href="/footer/Imprint">Imprint</a>
+        </div>
+</div>
