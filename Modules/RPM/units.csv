@@ -10,7 +10,7 @@ square meter per kilogram;m^2/kg;;area per mass;Metric;double;attribute or varia
 arearatio;m^2/m^2;;area ratio;Unknown;double;attribute or variable;1;
 ampere;A;;current;Metric;double;attribute or variable;1;
 ampere-hour;Ah;;current time;Metric;double;attribute or variable;(1/36)E-2;
-none;none;If no Unit is needed.;dimensionless;Unknown;string integer double bool;attribute or variable;;
+none;none;If no Unit is needed.;dimensionless;Unknown;string integer double decimal non-negative-long non-negative-integer number bool text date time datetime ;attribute or variable;;
 per mile;pm;;dimensionless;Imperial;double;attribute or variable;;
 degree;deg;;dimensionless;Unknown;double;attribute or variable;;
 arc;arc;;dimensionless;Unknown;string;attribute or variable;;
