@@ -3,8 +3,8 @@
 	<ShortName>BExIS2</ShortName>
 	<Title>Research Data Management System</Title>
 	<Description>BExIS2 is a general purpose research data management system...</Description>
-	<Logo>Bildmarke_BEXIS_cmyk.svg</Logo>
-	<Brand></Brand>
+	<Logo>logo.png</Logo>
+	<Brand>brand.png</Brand>
 	<FavIcon>favicon.ico</FavIcon>
 	<Theme>Default</Theme>
 	<Layout>_Layout</Layout>
