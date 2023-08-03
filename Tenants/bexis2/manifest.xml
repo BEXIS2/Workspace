@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Tenant id="bexis" useFallback="false">
+<Tenant id="bexis2" useFallback="false">
 	<ShortName>BExIS2</ShortName>
 	<Title>Research Data Management System</Title>
 	<Description>BExIS2 is a general purpose research data management system...</Description>
