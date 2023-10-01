@@ -29,18 +29,6 @@
           "value": "na",
           "type": "String",
           "description": "not available"
-        },
-        {
-          "key": "missingValue",
-          "value": "nm",
-          "type": "String",
-          "description": "not measured"
-        },
-        {
-          "key": "missingValue",
-          "value": "no",
-          "type": "String",
-          "description": "not observed"
         }
       ],
       "description": "...",
