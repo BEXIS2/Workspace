@@ -2,7 +2,7 @@
   "id": "rpm",
   "name": "research plan",
   "description": "...",
-  "entry": [
+  "entries": [
     {
       "key": "help",
       "value": "https://github.com/BEXIS2/Documents/blob/2.14.5/Manuals/RPM/Manual.md",
@@ -22,41 +22,24 @@
       "description": "Show -Create Variable Template- on data structure edit"
     },
     {
-      "key": "name",
-      "value": "missingvalues",
-      "type": "list",
-      "description": "placeholder... description...",
-      "item": [
+      "key": "isTemplateRequired",
+      "value": true,
+      "type": "Boolean",
+      "description": "During data structure creation, variables are created. Is it mandatory to link these variables to templates?"
+    },
+    {
+      "key": "missingValues",
+      "value": [
         {
-          "attribute": [
-            {
-              "key": "placeholder",
-              "value": "na",
-              "type": "String"
-            },
-            {
-              "key": "description",
-              "value": "not available",
-              "type": "String"
-            }
-          ]
-        },
-        {
-          "attribute": [
-            {
-              "key": "placeholder",
-              "value": "NM",
-              "type": "String"
-            },
-            {
-              "key": "description",
-              "value": "not measured",
-              "type": "String"
-            }
-          ]
+          "key": "missingValue",
+          "value": "na",
+          "type": "String",
+          "description": "not available"
         }
-      ]
+      ],
+      "description": "...",
+      "type": "EntryList",
+      "options": []
     }
-
   ]
 }
