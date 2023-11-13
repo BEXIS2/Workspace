@@ -1,20 +1,19 @@
 <config>
 <referenceTypes>
-     <referenceType description="linked dataset is used in the current publication (only to link publication and dataset)">IsSupplementTo</referenceType>
-    <referenceType description="linked publication uses the current dataset (only to link dataset and publication)">IsSupplementedBy</referenceType>
-    <referenceType description="linked dataset is a newer version of the current dataset">IsNewVersionOf</referenceType>
-    <referenceType description="linked dataset is an older version of the current dataset">IsPreviousVersionOf</referenceType>
-    <referenceType description="indicates that the current dataset is continued by the linked dataset (e.g., for time series)">IsContinuedBy</referenceType>
-    <referenceType description="indicates that the current dataset continues by the linked dataset (e.g., for time series)">Continues</referenceType>
-    <referenceType description="linked dataset is a source upon which the current dataset is based">IsDerivedFrom</referenceType>
-    <referenceType description="the original dataset is the source of the linked dataset">IsSourceOf</referenceType>
-    <referenceType description="linked dataset (e.g., synthesis datasets) is the result of a compile or creation event using the current dataset">Compiles</referenceType>
-    <referenceType description="linked dataset is used to compile or create the current dataset (e.g., synthesis datasets)">IsCompiledBy </referenceType>
-    <referenceType description="linked dataset is part of a collection (e.g., header data and species data)">Collection</referenceType>
-    <referenceType description="unspecific link to a dataset or publication">Link</referenceType>
+    <referenceType description="dataset is used in this publication (IsSupplementTo)">IsSupplementTo</referenceType>
+    <referenceType description="publication uses this dataset (IsSupplementedBy)">IsSupplementedBy</referenceType>
+    <referenceType description="current dataset is a newer version of the linked dataset (IsNewVersionOf)">IsNewVersionOf</referenceType>
+    <referenceType description="current dataset is an older version of the linked dataset (IsPreviousVersionOf)">IsPreviousVersionOf</referenceType>
+    <referenceType description="current datasets is continued by the linked dataset, e.g., for time series (IsContinuedBy)">IsContinuedBy</referenceType>
+    <referenceType description="current dataset continues the linked dataset, e.g., time series (Continues)">Continues</referenceType>
+    <referenceType description="current dataset is derived from the linked dataset, e.g., synthesis dataset (IsDerivedFrom)">IsDerivedFrom</referenceType>
+    <referenceType description="current dataset is a source of the linked dataset, e.g., synthesis dataset (IsSourceOf)">IsSourceOf</referenceType>
+    <referenceType description="dataset is part of a collection (Collection)">Collection</referenceType>
+    <referenceType description="unspecific link to a dataset or publication (Link)">Link</referenceType>
 </referenceTypes>
-<!--Whitelistfor entity types. Please configure, if you need to hide entities from the list
+<!--Whitelist for entity types. Please configure if you need to hide entities from the list
 <entityTypes>
-    <entityType description="">Dataset</entityType>
-</entityTypes>-->
+     <entityType description="">Dataset</entityType>
+     <entityType description="">Publication</entityType>
+</entityTypes> -->
 </config>
