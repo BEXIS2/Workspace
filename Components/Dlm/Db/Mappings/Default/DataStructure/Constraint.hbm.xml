@@ -31,10 +31,10 @@
     <property name="CultureId" type="String">
       <column name="CultureId" />
     </property>
-
-	<property name="Name" type="String">
-		<column name="Name" />
-	</property>
+	  
+    <property name="Name" type="String">
+      <column name="Name" />
+    </property>
 
     <property name="Description" type="String">
       <column name="Description" />
@@ -54,6 +54,18 @@
 
     <property name="NegatedMessageTemplate" type="String">
       <column name="NegatedMessageTemplate" />
+    </property>
+
+    <property name="CreationDate" type="DateTime">
+      <column name="CreationDate" />
+    </property>
+	  
+    <property name="LastModified" type="DateTime">
+      <column name="LastModified" />
+    </property>
+	  
+    <property name="LastModifiedUserRef" type="Int64">
+      <column name="LastModifiedUserRef" />
     </property>
 
     <many-to-one name="DataContainer" class="DataContainer" not-null="false" column="DataContainerRef"/>
