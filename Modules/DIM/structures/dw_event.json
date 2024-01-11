@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
- "type": "event",
-=======
- "type": "occurrence",
->>>>>>> 671ac10ddbb8b59383f61e3b45fa59238743fd44
+ "type": "samplingEvent",
  "field":[
    {
     "index":1,
