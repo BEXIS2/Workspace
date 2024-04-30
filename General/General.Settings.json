@@ -99,7 +99,7 @@
       "title": "Landing Page for Users",
       "value": "ddm, Home, index",
       "type": "String",
-      "description": "user logged in, but do not have permission to view the page; shell, home, nopermission is by default; Alternatives must be in a module NOT shell"
+      "description": "user is not logging in -> app goes to. if no destination is entered, the landingpage.htm is loaded from the tenant/content/landingpage.htm"
     },
     {
       "key": "landingPageForUsersNoPermission",
