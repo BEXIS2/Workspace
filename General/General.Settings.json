@@ -92,14 +92,14 @@
       "title": "Landing Page",
       "value": "ddm, publicsearch, index",
       "type": "String",
-      "description": "user is not logging in -> app goes to"
+      "description": "user is not logging in -> app goes to e.g. (ddm, publicsearch, index). if no destination is entered, the landingpage.htm is loaded from the tenant/content/landingpage.htm"
     },
     {
       "key": "landingPageForUsers",
       "title": "Landing Page for Users",
       "value": "ddm, Home, index",
       "type": "String",
-      "description": "user is not logging in -> app goes to. if no destination is entered, the landingpage.htm is loaded from the tenant/content/landingpage.htm"
+      "description": "user logged in, but do not have permission to view the page; shell, home, nopermission is by default; Alternatives must be in a module NOT shell"
     },
     {
       "key": "landingPageForUsersNoPermission",
