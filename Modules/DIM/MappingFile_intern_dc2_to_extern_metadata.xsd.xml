@@ -1,0 +1,202 @@
+<mapping name="dc2">
+  <header>
+    <destination namespaceUri="" prefix="resource" sequence="" xPath="resource" />
+    <attributes />
+    <packages />
+    <schema abbreviation="dc2" url="Metadata/dc2/metadata.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/identifier/identifierType/@identifierType" />
+      <destination xPath="resource/identifier/@identifierType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/identifier/identifierType" />
+      <destination xPath="resource/identifier" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/publisher/publisherType" />
+      <destination xPath="resource/publisher" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/publicationYear/publicationYearType" />
+      <destination xPath="resource/publicationYear" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/resourceType/resourceTypeType/@resourceTypeGeneral" />
+      <destination xPath="resource/resourceType/@resourceTypeGeneral" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/resourceType/resourceTypeType" />
+      <destination xPath="resource/resourceType" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/Layer/LayerType" />
+      <destination xPath="resource/Layer" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/language/languageType" />
+      <destination xPath="resource/language" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/version/versionType" />
+      <destination xPath="resource/version" sequence="resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/creatorName/creatorNameType" />
+      <destination xPath="resource/creators/creator/creatorName" sequence="creator" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/givenName/givenNameType" />
+      <destination xPath="resource/creators/creator/givenName" sequence="creator" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/familyName/familyNameType" />
+      <destination xPath="resource/creators/creator/familyName" sequence="creator" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/nameIdentifier/nameIdentifierType/@nameIdentifierScheme" />
+      <destination xPath="resource/creators/creator/nameIdentifier/@nameIdentifierScheme" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/nameIdentifier/nameIdentifierType" />
+      <destination xPath="resource/creators/creator/nameIdentifier" sequence="nameIdentifier" />
+    </route>
+    <route>
+      <source xPath="Metadata/creators/creatorsType/creator/creatorType/affiliation/affiliationType" />
+      <destination xPath="resource/creators/creator/affiliation" sequence="affiliation" />
+    </route>
+    <route>
+      <source xPath="Metadata/titles/titlesType/title/titleType/@titleType" />
+      <destination xPath="resource/titles/title/@titleType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/titles/titlesType/title/titleType/@" />
+      <destination xPath="resource/titles/title/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/titles/titlesType/title/titleType" />
+      <destination xPath="resource/titles/title" sequence="title" />
+    </route>
+    <route>
+      <source xPath="Metadata/taxonomicTerms/taxonomicTermsType/taxonomicTerm/taxonomicTermType" />
+      <destination xPath="resource/taxonomicTerms/taxonomicTerm" sequence="taxonomicTerm" />
+    </route>
+    <route>
+      <source xPath="Metadata/ecosystemProcesses/ecosystemProcessesType/ecosystemProcess/ecosystemProcessType" />
+      <destination xPath="resource/ecosystemProcesses/ecosystemProcess" sequence="ecosystemProcess" />
+    </route>
+    <route>
+      <source xPath="Metadata/methods/methodsType/method/methodType" />
+      <destination xPath="resource/methods/method" sequence="method" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/contributorName/contributorNameType" />
+      <destination xPath="resource/contributors/contributor/contributorName" sequence="contributor" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/givenName/givenNameType" />
+      <destination xPath="resource/contributors/contributor/givenName" sequence="contributor" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/familyName/familyNameType" />
+      <destination xPath="resource/contributors/contributor/familyName" sequence="contributor" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/nameIdentifier/nameIdentifierType" />
+      <destination xPath="resource/contributors/contributor/nameIdentifier" sequence="nameIdentifier" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/affiliation/affiliationType" />
+      <destination xPath="resource/contributors/contributor/affiliation" sequence="affiliation" />
+    </route>
+    <route>
+      <source xPath="Metadata/contributors/contributorsType/contributor/contributorType/@contributorType" />
+      <destination xPath="resource/contributors/contributor/@contributorType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/dates/datesType/date/dateType/@dateType" />
+      <destination xPath="resource/dates/date/@dateType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/dates/datesType/date/dateType" />
+      <destination xPath="resource/dates/date" sequence="date" />
+    </route>
+    <route>
+      <source xPath="Metadata/alternateIdentifiers/alternateIdentifiersType/alternateIdentifier/alternateIdentifierType/@alternateIdentifierType" />
+      <destination xPath="resource/alternateIdentifiers/alternateIdentifier/@alternateIdentifierType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/alternateIdentifiers/alternateIdentifiersType/alternateIdentifier/alternateIdentifierType" />
+      <destination xPath="resource/alternateIdentifiers/alternateIdentifier" sequence="alternateIdentifier" />
+    </route>
+    <route>
+      <source xPath="Metadata/relatedIdentifiers/relatedIdentifiersType/relatedIdentifier/relatedIdentifierType/@relatedIdentifierType" />
+      <destination xPath="resource/relatedIdentifiers/relatedIdentifier/@relatedIdentifierType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/relatedIdentifiers/relatedIdentifiersType/relatedIdentifier/relatedIdentifierType/@relationType" />
+      <destination xPath="resource/relatedIdentifiers/relatedIdentifier/@relationType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/relatedIdentifiers/relatedIdentifiersType/relatedIdentifier/relatedIdentifierType" />
+      <destination xPath="resource/relatedIdentifiers/relatedIdentifier" sequence="relatedIdentifier" />
+    </route>
+    <route>
+      <source xPath="Metadata/sizes/sizesType/size/sizeType" />
+      <destination xPath="resource/sizes/size" sequence="size" />
+    </route>
+    <route>
+      <source xPath="Metadata/formats/formatsType/format/formatType" />
+      <destination xPath="resource/formats/format" sequence="format" />
+    </route>
+    <route>
+      <source xPath="Metadata/rightsList/rightsListType/rights/rightsType/@rightsIdentifier" />
+      <destination xPath="resource/rightsList/rights/@rightsIdentifier" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/rightsList/rightsListType/rights/rightsType" />
+      <destination xPath="resource/rightsList/rights" sequence="rightsList" />
+    </route>
+    <route>
+      <source xPath="Metadata/descriptions/descriptionsType/description/descriptionType/@descriptionType" />
+      <destination xPath="resource/descriptions/description/@descriptionType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/descriptions/descriptionsType/description/descriptionType" />
+      <destination xPath="resource/descriptions/description" sequence="description" />
+    </route>
+    <route>
+      <source xPath="Metadata/geoLocations/geoLocationsType/geoLocation/geoLocationType/geoLocationPlace/geoLocationPlaceType" />
+      <destination xPath="resource/geoLocations/geoLocation/geoLocationPlace" sequence="geoLocation" />
+    </route>
+    <route>
+      <source xPath="Metadata/geoLocations/geoLocationsType/geoLocation/geoLocationType/geoLocationPoint/point/pointLongitude/pointLongitudeType" />
+      <destination xPath="resource/geoLocations/geoLocation/geoLocationPoint/pointLongitude" sequence="geoLocationPoint" />
+    </route>
+    <route>
+      <source xPath="Metadata/geoLocations/geoLocationsType/geoLocation/geoLocationType/geoLocationPoint/point/pointLatitude/pointLatitudeType" />
+      <destination xPath="resource/geoLocations/geoLocation/geoLocationPoint/pointLatitude" sequence="geoLocationPoint" />
+    </route>
+    <route>
+      <source xPath="Metadata/fundingReferences/fundingReferencesType/fundingReference/fundingReferenceType/funderName/funderNameType" />
+      <destination xPath="resource/fundingReferences/fundingReference/funderName" sequence="fundingReference" />
+    </route>
+    <route>
+      <source xPath="Metadata/fundingReferences/fundingReferencesType/fundingReference/fundingReferenceType/funderIdentifier/funderIdentifierType/@funderIdentifierType" />
+      <destination xPath="resource/fundingReferences/fundingReference/funderIdentifier/@funderIdentifierType" sequence="" />
+    </route>
+    <route>
+      <source xPath="Metadata/fundingReferences/fundingReferencesType/fundingReference/fundingReferenceType/funderIdentifier/funderIdentifierType" />
+      <destination xPath="resource/fundingReferences/fundingReference/funderIdentifier" sequence="fundingReference" />
+    </route>
+    <route>
+      <source xPath="Metadata/fundingReferences/fundingReferencesType/fundingReference/fundingReferenceType/awardNumber/awardNumberType" />
+      <destination xPath="resource/fundingReferences/fundingReference/awardNumber" sequence="fundingReference" />
+    </route>
+    <route>
+      <source xPath="Metadata/fundingReferences/fundingReferencesType/fundingReference/fundingReferenceType/awardTitle/awardTitleType" />
+      <destination xPath="resource/fundingReferences/fundingReference/awardTitle" sequence="fundingReference" />
+    </route>
+  </routes>
+</mapping>

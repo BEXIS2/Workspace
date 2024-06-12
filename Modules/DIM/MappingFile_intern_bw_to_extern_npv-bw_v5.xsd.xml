@@ -1,0 +1,146 @@
+<mapping name="bw">
+  <header>
+    <destination namespaceUri="" prefix="" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="bw" url="Metadata/bw/npv-bw_v5.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="metadata/DatasetInformation/Title" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/Title/TitleType" sequence="DatasetInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/TypeOfData" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/TypeOfData/TypeOfDataType" sequence="TypeOfDataType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/ShortDatasetDescription" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/ShortDatasetDescription/ShortDatasetDescriptionType" sequence="DatasetInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/DatasetDescription" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/DatasetDescription/DatasetDescriptionType" sequence="DatasetInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/Keyword" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/Keyword/KeywordType" sequence="KeywordType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/DataAccessPolicy" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/DataAccessPolicy/DataAccessPolicyType" sequence="DatasetInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/DatasetStatus" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/DatasetStatus/DatasetStatusType" sequence="DatasetInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/AssociatedPerson/Name" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/AssociatedPerson/person/Name/NameType" sequence="person" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/AssociatedPerson/Email" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/AssociatedPerson/person/Email/EmailType" sequence="person" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/AssociatedPerson/Address" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/AssociatedPerson/person/Address/AddressType" sequence="person" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/AssociatedPerson/HomepageUrl" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/AssociatedPerson/person/HomepageUrl/HomepageUrlType" sequence="person" />
+    </route>
+    <route>
+      <source xPath="metadata/DatasetInformation/AssociatedPerson/Role" />
+      <destination xPath="Metadata/DatasetInformation/DatasetInformationType/AssociatedPerson/person/Role/RoleType" sequence="RoleType" />
+    </route>
+    <route>
+      <source xPath="metadata/EnviromentalInformation/Habitat" />
+      <destination xPath="Metadata/EnviromentalInformation/EnviromentalInformationType/Habitat/HabitatType" sequence="EnviromentalInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/EnviromentalInformation/Biome" />
+      <destination xPath="Metadata/EnviromentalInformation/EnviromentalInformationType/Biome/BiomeType" sequence="EnviromentalInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/EnviromentalInformation/Remarks" />
+      <destination xPath="Metadata/EnviromentalInformation/EnviromentalInformationType/Remarks/RemarksType" sequence="EnviromentalInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/TaxonomicCoverage/Kingdom" />
+      <destination xPath="Metadata/TaxonomicCoverage/TaxonomicCoverageType/Kingdom/KingdomType" sequence="KingdomType" />
+    </route>
+    <route>
+      <source xPath="metadata/TaxonomicCoverage/TaxonGroup" />
+      <destination xPath="Metadata/TaxonomicCoverage/TaxonomicCoverageType/TaxonGroup/TaxonGroupType" sequence="TaxonGroupType" />
+    </route>
+    <route>
+      <source xPath="metadata/TaxonomicCoverage/Remarks" />
+      <destination xPath="Metadata/TaxonomicCoverage/TaxonomicCoverageType/Remarks/RemarksType" sequence="TaxonomicCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/LocalityName" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/LocalityName/LocalityNameType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/Latitude" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/Latitude/LatitudeType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/Longitude" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/Longitude/LongitudeType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/NumberOfPlots" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/NumberOfPlots/NumberOfPlotsType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/Altitude" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/Altitude/AltitudeType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/Depth" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/Depth/DepthType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/SpatialCoverage/Remarks" />
+      <destination xPath="Metadata/SpatialCoverage/SpatialCoverageType/Remarks/RemarksType" sequence="SpatialCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/TemporalCoverage/DateOfFirstRecord" />
+      <destination xPath="Metadata/TemporalCoverage/TemporalCoverageType/DateOfFirstRecord/DateOfFirstRecordType" sequence="TemporalCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/TemporalCoverage/DateOfLastRecord" />
+      <destination xPath="Metadata/TemporalCoverage/TemporalCoverageType/DateOfLastRecord/DateOfLastRecordType" sequence="TemporalCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/TemporalCoverage/TemporalResolution" />
+      <destination xPath="Metadata/TemporalCoverage/TemporalCoverageType/TemporalResolution/TemporalResolutionType" sequence="TemporalResolutionType" />
+    </route>
+    <route>
+      <source xPath="metadata/TemporalCoverage/Remarks" />
+      <destination xPath="Metadata/TemporalCoverage/TemporalCoverageType/Remarks/RemarksType" sequence="TemporalCoverageType" />
+    </route>
+    <route>
+      <source xPath="metadata/AdditionalInformation/publications" />
+      <destination xPath="Metadata/AdditionalInformation/AdditionalInformationType/publications/publicationsType" sequence="publicationsType" />
+    </route>
+    <route>
+      <source xPath="metadata/AdditionalInformation/projects" />
+      <destination xPath="Metadata/AdditionalInformation/AdditionalInformationType/projects/projectsType" sequence="projectsType" />
+    </route>
+    <route>
+      <source xPath="metadata/AdditionalInformation/AssociatedDatasets" />
+      <destination xPath="Metadata/AdditionalInformation/AdditionalInformationType/AssociatedDatasets/AssociatedDatasetsType" sequence="AssociatedDatasetsType" />
+    </route>
+    <route>
+      <source xPath="metadata/AdditionalInformation/Remarks" />
+      <destination xPath="Metadata/AdditionalInformation/AdditionalInformationType/Remarks/RemarksType" sequence="AdditionalInformationType" />
+    </route>
+    <route>
+      <source xPath="metadata/AdditionalInformation/HowToCite" />
+      <destination xPath="Metadata/AdditionalInformation/AdditionalInformationType/HowToCite/HowToCiteType" sequence="AdditionalInformationType" />
+    </route>
+  </routes>
+</mapping>

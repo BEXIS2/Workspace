@@ -1,0 +1,246 @@
+<mapping name="kili">
+  <header>
+    <destination namespaceUri="" prefix="" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="kili" url="Metadata/kili/kili-ses-v1.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="metaProfile/general/title" />
+      <destination xPath="Metadata/general/generalType/title/titleType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/abstract" />
+      <destination xPath="Metadata/general/generalType/abstract/abstractType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/keywords" />
+      <destination xPath="Metadata/general/generalType/keywords/keywordsType" sequence="keywordsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/license" />
+      <destination xPath="Metadata/general/generalType/license/licenseType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/ProjectPhase" />
+      <destination xPath="Metadata/general/generalType/ProjectPhase/ProjectPhaseType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/subproject" />
+      <destination xPath="Metadata/general/generalType/subproject/subprojectType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/metadataCreationDate" />
+      <destination xPath="Metadata/general/generalType/metadataCreationDate/metadataCreationDateType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/metadataLastModificationDate" />
+      <destination xPath="Metadata/general/generalType/metadataLastModificationDate/metadataLastModificationDateType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/dataLastModificationDate" />
+      <destination xPath="Metadata/general/generalType/dataLastModificationDate/dataLastModificationDateType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/ID" />
+      <destination xPath="Metadata/general/generalType/ID/IDType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/version" />
+      <destination xPath="Metadata/general/generalType/version/versionType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/funder/name" />
+      <destination xPath="Metadata/general/generalType/funder/funderType/name/nameType" sequence="funderType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/funder/identifierOfFunding" />
+      <destination xPath="Metadata/general/generalType/funder/funderType/identifierOfFunding/identifierOfFundingType" sequence="funderType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/general/synthesis" />
+      <destination xPath="Metadata/general/generalType/synthesis/synthesisType" sequence="generalType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/metadataCreator" />
+      <destination xPath="Metadata/team/teamType/metadataCreator/metadataCreatorType" sequence="teamType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/dataCreator" />
+      <destination xPath="Metadata/team/teamType/dataCreator/dataCreatorType" sequence="dataCreatorType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/dataCollector" />
+      <destination xPath="Metadata/team/teamType/dataCollector/dataCollectorType" sequence="dataCollectorType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/PI" />
+      <destination xPath="Metadata/team/teamType/PI/PIType" sequence="PIType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/contactPerson/name" />
+      <destination xPath="Metadata/team/teamType/contactPerson/contactType/name/nameType" sequence="contactType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/team/contactPerson/email" />
+      <destination xPath="Metadata/team/teamType/contactPerson/contactType/email/emailType" sequence="contactType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/numberOfPlots/numberOfGP" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/numberOfPlots/numberOfPlotsType/numberOfGP/numberOfGPType" sequence="numberOfPlotsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/numberOfPlots/numberOfEP" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/numberOfPlots/numberOfPlotsType/numberOfEP/numberOfEPType" sequence="numberOfPlotsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/numberOfPlots/numberOfMIP" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/numberOfPlots/numberOfPlotsType/numberOfMIP/numberOfMIPType" sequence="numberOfPlotsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/numberOfPlots/numberOfVIP" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/numberOfPlots/numberOfPlotsType/numberOfVIP/numberOfVIPType" sequence="numberOfPlotsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/jointExperiment_2020/experimentType" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/jointExperiment_2020/jointExperiment_2020Type/experimentType/experimentTypeType" sequence="experimentTypeType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/coordinates-WGS84/longitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/coordinates-WGS84/coordinates-WGS84Type/longitude/longitudeType" sequence="coordinates-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/coordinates-WGS84/latitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/coordinates-WGS84/coordinates-WGS84Type/latitude/latitudeType" sequence="coordinates-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/boundingBox-WGS84/westernMostLongitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/boundingBox-WGS84/boundingBox-WGS84Type/westernMostLongitude/westernMostLongitudeType" sequence="boundingBox-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/boundingBox-WGS84/northernMostLatitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/boundingBox-WGS84/boundingBox-WGS84Type/northernMostLatitude/northernMostLatitudeType" sequence="boundingBox-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/boundingBox-WGS84/easternMostLongitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/boundingBox-WGS84/boundingBox-WGS84Type/easternMostLongitude/easternMostLongitudeType" sequence="boundingBox-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/geographicCoverage/boundingBox-WGS84/southernMostLatitude" />
+      <destination xPath="Metadata/coverage/coverageType/geographicCoverage/geographicCoverageType/boundingBox-WGS84/boundingBox-WGS84Type/southernMostLatitude/southernMostLatitudeType" sequence="boundingBox-WGS84Type" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/ecosystemType" />
+      <destination xPath="Metadata/coverage/coverageType/ecosystemType/ecosystemTypeType" sequence="ecosystemTypeType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/temporalCoverage/startDate" />
+      <destination xPath="Metadata/coverage/coverageType/temporalCoverage/temporalCoverageType/startDate/startDateType" sequence="temporalCoverageType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/temporalCoverage/endDate" />
+      <destination xPath="Metadata/coverage/coverageType/temporalCoverage/temporalCoverageType/endDate/endDateType" sequence="temporalCoverageType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/coverage/taxonomicCoverage/taxon" />
+      <destination xPath="Metadata/coverage/coverageType/taxonomicCoverage/taxonomicCoverageType/taxon/taxonType" sequence="taxonType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/studyDesign/experimentalManipulation" />
+      <destination xPath="Metadata/methods/methodsType/studyDesign/studyDesignType/experimentalManipulation/experimentalManipulationType" sequence="studyDesignType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/studyDesign/temporalRepetitionsPerStudySite" />
+      <destination xPath="Metadata/methods/methodsType/studyDesign/studyDesignType/temporalRepetitionsPerStudySite/temporalRepetitionsPerStudySiteType" sequence="studyDesignType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/studyDesign/plotBasedRepetitionsOfMeasurements" />
+      <destination xPath="Metadata/methods/methodsType/studyDesign/studyDesignType/plotBasedRepetitionsOfMeasurements/plotBasedRepetitionsOfMeasurementsType" sequence="studyDesignType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/studyDesign/detailedDescriptionOfStudyDesign" />
+      <destination xPath="Metadata/methods/methodsType/studyDesign/studyDesignType/detailedDescriptionOfStudyDesign/detailedDescriptionOfStudyDesignType" sequence="studyDesignType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/measurements/samplingDesign" />
+      <destination xPath="Metadata/methods/methodsType/measurements/measurementsType/samplingDesign/samplingDesignType" sequence="measurementsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/measurements/samplePreparation" />
+      <destination xPath="Metadata/methods/methodsType/measurements/measurementsType/samplePreparation/samplePreparationType" sequence="measurementsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/measurements/sampleAnalysis" />
+      <destination xPath="Metadata/methods/methodsType/measurements/measurementsType/sampleAnalysis/sampleAnalysisType" sequence="measurementsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/measurements/equipment" />
+      <destination xPath="Metadata/methods/methodsType/measurements/measurementsType/equipment/equipmentType" sequence="measurementsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/dataProcessing/dataPreparation" />
+      <destination xPath="Metadata/methods/methodsType/dataProcessing/dataProcessingType/dataPreparation/dataPreparationType" sequence="dataProcessingType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/dataProcessing/dataAnalysis" />
+      <destination xPath="Metadata/methods/methodsType/dataProcessing/dataProcessingType/dataAnalysis/dataAnalysisType" sequence="dataProcessingType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/references/literatureReferences" />
+      <destination xPath="Metadata/methods/methodsType/references/referencesType/literatureReferences/literatureReferencesType" sequence="referencesType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/references/dataReferences" />
+      <destination xPath="Metadata/methods/methodsType/references/referencesType/dataReferences/dataReferencesType" sequence="referencesType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/acronyms/acronymPair/acronym" />
+      <destination xPath="Metadata/methods/methodsType/acronyms/acronymsType/acronymPair/acronymPairType/acronym/acronymType" sequence="acronymPairType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/acronyms/acronymPair/meaning" />
+      <destination xPath="Metadata/methods/methodsType/acronyms/acronymsType/acronymPair/acronymPairType/meaning/meaningType" sequence="acronymPairType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/methods/importantNotes" />
+      <destination xPath="Metadata/methods/methodsType/importantNotes/importantNotesType" sequence="methodsType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/dataProcessingStatus" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/dataProcessingStatus/dataProcessingStatusType" sequence="dataTypeAndStatusType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/dataUploadStatus" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/dataUploadStatus/dataUploadStatusType" sequence="dataTypeAndStatusType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/contentType" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/contentType/contentTypeType" sequence="dataTypeAndStatusType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/repository/nameOfRepository" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/repository/repositoryType/nameOfRepository/nameOfRepositoryType" sequence="repositoryType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/repository/url" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/repository/repositoryType/url/urlType" sequence="repositoryType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/repository/identifier" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/repository/repositoryType/identifier/identifierType" sequence="repositoryType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/dataTypeAndStatus/repository/additionalInformation" />
+      <destination xPath="Metadata/dataTypeAndStatus/dataTypeAndStatusType/repository/repositoryType/additionalInformation/additionalInformationType" sequence="repositoryType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/publicationOrArchive/publicationLink" />
+      <destination xPath="Metadata/publicationOrArchive/publicationOrArchiveType/publicationLink/publicationLinkType" sequence="publicationOrArchiveType" />
+    </route>
+    <route>
+      <source xPath="metaProfile/publicationOrArchive/DOI" />
+      <destination xPath="Metadata/publicationOrArchive/publicationOrArchiveType/DOI/DOIType" sequence="publicationOrArchiveType" />
+    </route>
+  </routes>
+</mapping>

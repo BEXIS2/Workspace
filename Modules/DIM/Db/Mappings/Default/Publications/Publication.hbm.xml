@@ -1,4 +1,4 @@
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Dim.Entities" namespace="BExIS.Dim.Entities.Publication">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Dim.Entities" namespace="BExIS.Dim.Entities.Publications">
 	<class xmlns="urn:nhibernate-mapping-2.2" name="Publication" table="DIM_Publications">
 		<!-- Mapping BaseEntity properties -->
 
@@ -45,6 +45,10 @@
 			<column name="Status" />
 		</property>
 
+		<property name="Response" type="string">
+			<column name="Response" />
+		</property>
+
 		<!-- Associations -->
 
 		<many-to-one class="BExIS.Dlm.Entities.Data.DatasetVersion" name="DatasetVersion" column="DatasetVersionRef">
@@ -55,7 +59,5 @@
 
 		<many-to-one class="Repository" name="Repository" column="RepositoryRef">
 		</many-to-one>
-
-
 	</class>
 </hibernate-mapping>

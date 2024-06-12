@@ -1,0 +1,21 @@
+<mapping name="">
+  <header>
+    <destination />
+    <attributes />
+    <packages />
+  </header>
+  <routes>
+    <route>
+      <source xPath="Metadata/Basic/BasicType/title/titleType" />
+      <destination xPath="data" sequence="Title" />
+    </route>
+    <route>
+      <source xPath="Metadata/creator/creatorType/individualName/individualNameType/givenName/givenNameType" />
+      <destination xPath="data/creator/firstname" sequence="Creator" />
+    </route>
+    <route>
+      <source xPath="Metadata/creator/creatorType/individualName/individualNameType/surName/surNameType" />
+      <destination xPath="data/creator/lastname" sequence="Creator" />
+    </route>
+  </routes>
+</mapping>
