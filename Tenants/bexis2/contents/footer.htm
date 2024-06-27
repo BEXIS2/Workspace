@@ -1,10 +1,10 @@
-<div id="footer" class="grid w-full justify-center text-center gap-2 text-surface-700 py-5 ">
+<div id="footer" class="grid w-full justify-center text-center gap-2 text-surface-700 py-5">
 
- <div class="text-md">Powered by</div>
+ <div id="footer-label" class="text-md">Powered by</div>
 
  <div class="flex w-full justify-center items-center">
   <a href="http://bexis2.uni-jena.de" target="_blank" >
-      <img src="/Content/Images/Logo_BEXIS_rgb_113x28.jpg" class="desaturate" />
+    <img src="/Home/GetImage?image=logo.png" style="width:200px;"/>
   </a>
  </div>
 
@@ -15,3 +15,48 @@
    <a href="/footer/Imprint">Imprint</a>
  </div>
 </div>
+<style>
+
+  #footer.flex{
+    display: flex;
+  }
+
+  #footer-label.text-md{
+    font-size:16px;
+    color:#929292;
+  }
+
+  #footer.items-center
+  {
+    align-items: center;
+  }
+
+  #footer.grid{
+	  display: grid;
+    color:var(--color-surface-700);
+  }
+
+  #footer.w-full{
+    width: 100%;
+  }
+
+  #footer.justify-centerl{
+    justify-content: center;
+  }
+
+  #footer.text-center{
+    text-align: center;
+  }
+
+  #footer.gap-2{
+    gap: 10px; /* 8px */
+  }
+
+  #footer.py-5
+  {
+    padding-top: 20px; /* 20px */
+    padding-bottom: 20px; /* 20px */
+  }
+
+
+</style>
