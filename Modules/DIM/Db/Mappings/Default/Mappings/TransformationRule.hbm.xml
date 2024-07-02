@@ -1,5 +1,5 @@
-﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Dim.Entities" namespace="BExIS.Dim.Entities.Mapping">
-  <class xmlns="urn:nhibernate-mapping-2.2" name="TransformationRule" table="DIM_TransformationRules">
+﻿<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Dim.Entities" namespace="BExIS.Dim.Entities.Mappings">
+  <class xmlns="urn:nhibernate-mapping-2.2" name="TransformationRule" table="dim_transformationrules">
     <!-- Mapping BaseEntity properties -->
 
     <id name="Id" type="Int64">
@@ -16,11 +16,10 @@
     </property>
 
     <!-- Mapping TransformationRule properties -->
-    
+
     <property name="RegEx" type="string">
       <column name="RegEx" />
     </property>
-
 
     <property name="Mask" type="string">
       <column name="Mask" />
@@ -29,6 +28,5 @@
 	<property name="DefaultValue" type="string">
 		<column name="DefaultValue" />
 	</property>
-
   </class>
 </hibernate-mapping>

@@ -8,7 +8,7 @@
 	<FavIcon>favicon.ico</FavIcon>
 	<Theme>Default</Theme>
 	<Layout>_Layout</Layout>
-	<LandingPage>landingpage.htm</LandingPage>
+	<LandingPage>landingpage.htm</LandingPage> <!-- a relative path to an action inside the app-->
 	<Header>header.htm</Header>
 	<Footer>footer.htm</Footer>
 	<PolicyFileName>policy.htm</PolicyFileName>

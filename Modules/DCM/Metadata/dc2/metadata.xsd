@@ -1,0 +1,850 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+  %% Description %%
+  DataCite profile for the BEXIS2 instance of the Ecological Field Station Fabrikschleichach
+  
+  Changes that are not compatible with DataCite and have to be fixed for export:
+  * fixed in v3.0: contributor @contributorType -> contributorName @contributorType
+  * uncommented in v3.0: relatedItem @relatedItemType = "Journal"
+  * uncommented in v3.0: relatedItem @relationType = "IsPublishedIn"
+  * uncommented in v3.0: relatedItem/titles/title -> relatedItems/titles/journalTitle
+  * uncommented in v3.0: relatedItem/publisher -> relatedItems/journalPublisher
+  * uncommented in v3.0: relatedItem/relatedItemIdentifier @relatedItemIdentifierType (type= relatedIdentifierType) -> relatedItem/relatedItemIdentifier @relatedItemIdentifierType (type= relatedItemIdentifierType)
+  * taxonomicTerm -> subject
+  * ecosystemProcess -> subject
+  * method -> subject
+  * layer -> subject
+  
+  To be added for export:
+  * publisher attributes
+  * geoLocations
+  * subject @classificationCode
+  * contributors, e.g. data managaer
+     
+  %% Revision history %%
+  2023-04-13 v1.0: first release 
+  2023-04-18 v1.1: changed description type from xs:string to text in order to change input field to text area 
+  2023-04-27 v1.2: changed title format (incl. project name); included <href>-tags; smaller changes in some comments
+  2023-05-05 v1.3: uncommented the geographic information fields
+  2023-09-28 v2.0: activated the size field; renamed the field(s) subject(s) -> taxonomicTerm(s); added the fields method and layer (v1-Datasets: 13-18)
+  2023-11-23 v2.1: added "Hard Drive" to alternateIdentifier
+  2024-03-12 v3.0: fixed value: publisher = 'University of Würzburg'
+				   default value: language = 'en'
+				   contributorName @contributorType -> contributor @contributorType
+				   Element "ecosystemProcesses" added
+				   ucommented relatedItem
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://datacite.org/schema/kernel-4" targetNamespace="http://datacite.org/schema/kernel-4" elementFormDefault="qualified" xml:lang="EN">
+  <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="include/xml.xsd" />
+  <xs:include schemaLocation="datacite-titleType-v4.xsd" />
+  <xs:include schemaLocation="datacite-contributorType-v4.xsd" />
+  <xs:include schemaLocation="datacite-dateType-v4.xsd" />
+  <xs:include schemaLocation="datacite-resourceType-v4.xsd" />
+  <xs:include schemaLocation="datacite-relationType-v4.xsd" />
+  <xs:include schemaLocation="datacite-relatedIdentifierType-v4.xsd" />
+  <xs:include schemaLocation="datacite-relatedItemIdentifierType-v4.xsd" />
+  <xs:include schemaLocation="datacite-funderIdentifierType-v4.xsd" />
+  <xs:include schemaLocation="datacite-descriptionType-v4.xsd" />
+  <xs:element name="resource">
+    <xs:complexType>
+      <xs:all>
+        <!--REQUIRED FIELDS-->
+		<xs:element name="identifier">
+          <xs:annotation>
+            <xs:documentation><![CDATA[The ID of the dataset.</br>This information <b>will be set automatically</b>.]]></xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:simpleContent>
+              <xs:extension base="nonemptycontentStringType">
+                <xs:attribute name="identifierType" use="required" />
+              </xs:extension>
+            </xs:simpleContent>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="creators">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="creator" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[The <b>main researchers</b> involved working on the data in priority order. </br> 
+				  All creators are owners of the dataset and have <b>write permission</b>.]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+					<xs:element name="creatorName">
+						<xs:annotation>
+							<xs:documentation><![CDATA[<u>Format</u>: <b>Family, Given</b>.]]></xs:documentation>
+						</xs:annotation>	
+					</xs:element>
+                    <xs:element name="givenName" minOccurs="0" />
+                    <xs:element name="familyName" minOccurs="0" />
+                    <xs:element name="nameIdentifier" type="nameIdentifier" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation><![CDATA[Default value for [Name identifier scheme]: <b>ORCID</b>]]></xs:documentation>
+						</xs:annotation>	
+					</xs:element>
+                    <xs:element name="affiliation" xsi:type="affiliation" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="titles">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="title" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[<u>Format</u>: <b>Project_Subproject_Organism_Method/Device_Year</b>, e.g. "BETA-FOR_SP9_Bat_BatRecorder_2022". </br> 
+				  For depicting time ranges, use the following syntax: YYYY/YYYY, e.g. "BETA-FOR_SPZ_Temperature_Tomst_2022/2023".]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="titleType" type="titleType" use="optional" />
+                      <xs:attribute ref="xml:lang" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="publisher" type="xs:string" fixed="University of Würzburg">
+          <xs:annotation>
+            <xs:documentation><![CDATA[The name of the entity that holds, archives, publishes, prints, distributes, releases, issues, or produces the dataset. </br>
+			Default is <b>University of Würzburg</b>.]]></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="publicationYear" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation><![CDATA[<u>Format</u>: <b>YYYY</b>]]></xs:documentation>
+          </xs:annotation>
+          <xs:simpleType>
+            <xs:restriction base="yearType" />
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="resourceType">
+          <xs:annotation>
+            <xs:documentation><![CDATA[Use a <a href="https://docs.gbif.org/course-data-use/en/basis-of-record.html">Darwin Core class label</a>, e.g.:</br>	
+			<ul>
+				<li><b>Human Observation</b> = An output of human observation process eg. a record of an occurence without physical evidence nor evidence captured with a machine.</li>
+				<li><b>Machine Observation</b> = An output of a machine observation process, for example a photograph, a video, an audio recording, a remote sensing image or an occurrence record based on telemetry.</li>
+			</ul>
+		  ]]></xs:documentation>
+		  </xs:annotation>
+		  <xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="basisOfRecord">
+					<xs:attribute name="resourceTypeGeneral" type="resourceType" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		 </xs:complexType>
+        </xs:element>
+		
+        <!--OPTIONAL FIELDS-->
+        <xs:element name="taxonomicTerms" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="taxonomicTerm" type="taxonomicTerm" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+				  <xs:documentation><![CDATA[Select one or more Taxonomic Term(s).]]></xs:documentation>
+				</xs:annotation>
+                <!-- <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="subjectScheme" use="optional" />
+                      <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="valueURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="classificationCode" type="xs:anyURI" use="optional" />
+                      <xs:attribute ref="xml:lang" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType> -->
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="ecosystemProcesses" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ecosystemProcess" type="ecosystemProcess" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+				  <xs:documentation><![CDATA[Select one or more Ecosystem Process(es).]]></xs:documentation>
+				</xs:annotation>
+                <!-- <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="subjectScheme" use="optional" />
+                      <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="valueURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="classificationCode" type="xs:anyURI" use="optional" />
+                      <xs:attribute ref="xml:lang" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType> -->
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="methods" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="method" type="method" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+				  <xs:documentation><![CDATA[Select one or more Method(s).]]></xs:documentation>
+				</xs:annotation>
+                <!-- <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="subjectScheme" use="optional" />
+                      <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="valueURI" type="xs:anyURI" use="optional" />
+                      <xs:attribute name="classificationCode" type="xs:anyURI" use="optional" />
+                      <xs:attribute ref="xml:lang" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType> -->
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		<xs:element name="Layer" type="layer" minOccurs="0">
+			<xs:annotation>
+				<xs:documentation><![CDATA[Were the measurements taken <b>above ground</b> or <b>below ground</b>?.]]></xs:documentation>
+			</xs:annotation>
+		</xs:element>
+        <xs:element name="contributors" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contributor" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[Person(s) responsible for collecting, creating, or otherwise contributing to the developement of the dataset (e.g. Site Manager, TAs, Studentische Hilfskräfte, Praktiker, ...).</br>
+				  All contributors have <b>read permission</b> on the dataset.
+				  ]]></xs:documentation>
+				</xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="contributorName">
+						<xs:annotation>
+							<xs:documentation><![CDATA[<u>Format</u>: <b>Family, Given</b>.]]></xs:documentation>
+						</xs:annotation>
+						<!-- <xs:complexType>
+							<xs:simpleContent>
+								<xs:extension base="xs:string">
+									<xs:attribute name="contributorType" type="contributorType" use="required" />								
+								</xs:extension>
+							</xs:simpleContent>
+						</xs:complexType> -->
+					</xs:element>
+                    <xs:element name="givenName" minOccurs="0" />
+                    <xs:element name="familyName" minOccurs="0" />
+                    <xs:element name="nameIdentifier" type="nameIdentifier" minOccurs="0" maxOccurs="unbounded">
+						<xs:annotation>
+							<xs:documentation><![CDATA[Default value for [Name identifier scheme]: <b>ORCID</b>]]></xs:documentation>
+						</xs:annotation>	
+					</xs:element>
+					<xs:element name="affiliation" xsi:type="affiliation" minOccurs="0" maxOccurs="unbounded" />
+                  </xs:sequence>
+                  <xs:attribute name="contributorType" type="contributorType" use="required" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dates" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="date" minOccurs="0" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation><![CDATA[Date(Time) or Date(Time) range, when the (primary) data was collected (in the field), created or updated.</br> 
+					Use one of the following formats: YYYY, YYYY-MM-DD, YYYY-MM-DDThh:mm:ssTZD. <b>Date(Time) ranges</b> should be formatted like this: 2023-07-01<b>/</b>2023-07-31.]]></xs:documentation>
+				</xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="dateType" type="dateType" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="language" type="xs:string" default="en">
+          <xs:annotation>
+            <xs:documentation><![CDATA[Language of the primary data.</br> 
+			Default is <b>en</b> (English).]]></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="alternateIdentifiers" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="alternateIdentifier" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[Has your dataset a DOI or is your (primary) data stored outside BEXIS2 (NAS, Archivserver)? Enter the <b>DOI</b> and/or the <b>external storage location</b> here.]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="alternateIdentifierType" type="alternateIdentifierType" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="relatedIdentifiers" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="relatedIdentifier" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[Are there <b>related resources inside or outside BEXIS</b>, e.g. a dataset from which the current dataset was compiled?</br>
+				  Or a journal in which the data was published?</br> 
+				  The current dataset is the source, the related dataset the target.</br>
+				  To refer to the geographic information dataset use <b>IsSupplementedBy</b> as [relationType].]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="relatedIdentifierType" type="relatedIdentifierType" use="required" />
+                      <xs:attribute name="relationType" type="relationType" use="required" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="sizes" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="size" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[(File) size of the primary data, e.g. 250 KB.]]></xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="formats" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="format" type="format" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[File extension of the primary data.]]></xs:documentation>
+                </xs:annotation>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="version" type="xs:string" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation><![CDATA[Version number of the dataset.</br>This information <b>will be set automatically</b>.]]></xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="rightsList" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rights" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[Under which license should the dataset be available (after publication)?</br>
+				  Select an identifier from the drop-down list. Recommended is <b>CC BY-NC-SA.</b></br>
+				  The text field <u>[Rights] should remain empty</u>.]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="rightsIdentifier" type="rightsIdentifier" use="optional" />
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="descriptions" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="description" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+				  <xs:documentation><![CDATA[Provide some free text information about the dataset:</br>
+                  <ol>
+					<li><b>Abstract</b>: Select "Abstract" as [Description type]</li>
+					<li><b>Methods</b>: Select "Methods" as [Description type]</li>
+				  </ol>
+				  ]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+					<xs:simpleContent>
+						<xs:extension base="text">
+							<xs:attribute name="descriptionType" type="descriptionType" use="required" />
+						</xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="geoLocations" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="geoLocation" minOccurs="0" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:choice maxOccurs="unbounded">
+                    <xs:element name="geoLocationPlace" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Enter a location name.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geoLocationPoint" type="point" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>A point contains a single latitude-longitude pair.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <!-- <xs:element name="geoLocationBox" type="box" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>A box contains two latitude-longitude pairs, with each pair separated by whitespace. The first pair is the lower corner, the second is the upper corner.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="geoLocationPolygon" minOccurs="0" maxOccurs="unbounded">
+                      <xs:annotation>
+                        <xs:documentation>A drawn polygon area, defined by a set of points and lines connecting the points in a closed chain.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="polygonPoint" type="point" minOccurs="4" maxOccurs="unbounded" />
+                          <xs:element name="inPolygonPoint" type="point" minOccurs="0" maxOccurs="1" />
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element> -->
+                  </xs:choice>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="fundingReferences" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="fundingReference" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation><![CDATA[Information about <b>project funding</b>.]]></xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:all>
+                    <xs:element name="funderName" minOccurs="1" maxOccurs="1">
+                      <xs:annotation>
+                        <xs:documentation>Name of the funding provider.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="nonemptycontentStringType" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="funderIdentifier" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Uniquely identifies the funding provider.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="funderIdentifierType" type="funderIdentifierType" use="required" />
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="awardNumber" type="xs:string" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>The project ID.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="awardTitle" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>The project name.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:all>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+		
+        <!-- <xs:element name="relatedItems" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="relatedItem" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>Information about a resource (e.g. Journal) related to the one being registered.</xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="relatedItemIdentifier" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Identifier of the related item.</xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:simpleContent>
+                          <xs:extension base="xs:string">
+                            <xs:attribute name="relatedItemIdentifierType" type="relatedIdentifierType" use="optional">
+                              <xs:annotation>
+                                <xs:documentation>The identifier type, e.g. DOI.</xs:documentation>
+                              </xs:annotation>
+                            </xs:attribute>
+                          </xs:extension>
+                        </xs:simpleContent>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="titles" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="title" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>Title of the related item.</xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="titleType" type="titleType" use="optional" />
+                                  <xs:attribute ref="xml:lang" />
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="publicationYear" minOccurs="0">
+					  <xs:annotation>
+                        <xs:documentation>Publication year of the related item.</xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="yearType" />
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="volume" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Volume of the related item.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="issue" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>Issue number of the related item.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="firstPage" minOccurs="0">
+                    </xs:element>
+                    <xs:element name="lastPage" minOccurs="0">
+                    </xs:element>
+                    <xs:element name="journalPublisher" minOccurs="0">
+					  <xs:annotation>
+                        <xs:documentation>The publisher of the related item.</xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute name="relatedItemType" type="resourceType" use="required">
+                    <xs:annotation>
+                      <xs:documentation>The related item type, e.g. Journal, DataPaper, Dissertation, ...</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                  <xs:attribute name="relationType" type="relationType" use="required">
+                    <xs:annotation>
+                      <xs:documentation>Description of the relationship of the resource being registered (source) and the related resource (target).</xs:documentation>
+                    </xs:annotation>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element> -->
+      </xs:all>
+    </xs:complexType>
+  </xs:element>
+
+
+  <!-- TYPE DECLARATIONS -->
+  <!-- defines value for mandatory fields -->
+  <xs:simpleType name="nonemptycontentStringType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- definition for nameIdentifier -->
+  <xs:complexType name="nameIdentifier">
+    <xs:annotation>
+      <xs:documentation>Uniquely identifies a person.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nonemptycontentStringType">
+        <xs:attribute name="nameIdentifierScheme" type="nameIdentifierScheme" use="required"/>
+        <!-- <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" /> -->
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- definition for affiliation -->
+  <xs:complexType name="affiliation">
+    <xs:annotation>
+      <xs:documentation>Uniquely identifies an affiliation.</xs:documentation>
+    </xs:annotation>
+    <xs:simpleContent>
+      <xs:extension base="nonemptycontentStringType">
+        <xs:attribute name="affiliationIdentifier" type="xs:string" use="optional" />
+        <xs:attribute name="affiliationIdentifierScheme" type="xs:string" use="optional" />
+        <xs:attribute name="schemeURI" type="xs:anyURI" use="optional" />
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  
+  <!-- defines the value for a year -->
+  <xs:simpleType name="yearType">
+    <xs:restriction base="xs:token">
+      <xs:pattern value="[\d]{4}" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- definitions for geoLocation -->
+  <xs:complexType name="point">
+    <xs:all>
+      <xs:element name="pointLongitude" type="longitudeType" minOccurs="1" >
+	  <xs:annotation>
+		<xs:documentation>Enter the x-coordinate here.</xs:documentation>
+		<xs:documentation>	!!!Make sure that you use a period as separator, not a comma!!!</xs:documentation>
+	  </xs:annotation>
+	  </xs:element>
+      <xs:element name="pointLatitude" type="latitudeType" minOccurs="1" >
+		<xs:annotation>
+			<xs:documentation>Enter the y-coordinate here.</xs:documentation>
+			<xs:documentation>	!!!Make sure that you use a period as separator, not a comma!!!</xs:documentation>
+		</xs:annotation>
+	  </xs:element>
+    </xs:all>
+  </xs:complexType>
+  <!-- <xs:complexType name="box">
+    <xs:all>
+      <xs:element name="westBoundLongitude" type="longitudeType" minOccurs="1" />
+      <xs:element name="eastBoundLongitude" type="longitudeType" minOccurs="1" />
+      <xs:element name="southBoundLatitude" type="latitudeType" minOccurs="1" />
+      <xs:element name="northBoundLatitude" type="latitudeType" minOccurs="1" />
+    </xs:all>
+  </xs:complexType> -->
+  
+ 
+  <xs:simpleType name="longitudeType">
+    <xs:restriction base="xs:float">
+      <xs:minInclusive value="-180" />
+      <xs:maxInclusive value="180" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="latitudeType">
+    <xs:restriction base="xs:float">
+      <xs:minInclusive value="-90" />
+      <xs:maxInclusive value="90" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="alternateIdentifierType">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Archive"/>
+		<xs:enumeration value="DOI"/>
+		<xs:enumeration value="External storage location"/>	
+		<xs:enumeration value="Hard Drive"/>
+	</xs:restriction>
+  </xs:simpleType> 
+   
+   
+  <xs:simpleType name="basisOfRecord">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Human Observation"/>
+		<xs:enumeration value="Machine Observation"/>
+	</xs:restriction>
+  </xs:simpleType> 
+  
+  <xs:simpleType name="ecosystemProcess">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="aboveground secondary productivity"/>
+		<xs:enumeration value="aggregate stability"/>
+		<xs:enumeration value="belowground secondary productivity"/>
+		<xs:enumeration value="carbon sequestration"/>
+		<xs:enumeration value="carcass decomposition"/>
+		<xs:enumeration value="climate regulation"/>
+		<xs:enumeration value="decomposition"/>
+		<xs:enumeration value="dung decomposition"/>
+		<xs:enumeration value="invertebrate herbivory resistance"/>
+		<xs:enumeration value="leaf litter decomposition"/>
+		<xs:enumeration value="microbial activity in soil"/>
+		<xs:enumeration value="nutrient cycling"/>
+		<xs:enumeration value="parasitism"/>
+		<xs:enumeration value="pollination"/>
+		<xs:enumeration value="predation"/>
+		<xs:enumeration value="primary productivity"/>
+		<xs:enumeration value="seed dispersal"/>
+		<xs:enumeration value="soil respiration"/>
+		<xs:enumeration value="symbiosis"/>
+		<xs:enumeration value="tree regeneration"/>
+		<xs:enumeration value="vertebrate herbivory resistance"/>
+		<xs:enumeration value="wood decomposition"/>
+	</xs:restriction>
+  </xs:simpleType> 
+  
+  <xs:simpleType name="format">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="BIN"/>
+		<xs:enumeration value="CSV"/>
+		<xs:enumeration value="DOCX"/>
+		<xs:enumeration value="FLAC"/>
+		<xs:enumeration value="GIF"/>
+		<xs:enumeration value="HTML"/>
+		<xs:enumeration value="JPG"/>
+		<xs:enumeration value="ODS"/>
+		<xs:enumeration value="ODT"/>
+		<xs:enumeration value="PDF"/>
+		<xs:enumeration value="PNG"/>
+		<xs:enumeration value="PPTX"/>
+		<xs:enumeration value="R"/>
+		<xs:enumeration value="RAW"/>
+		<xs:enumeration value="ROBJ"/>
+		<xs:enumeration value="SVG"/>
+		<xs:enumeration value="TAR"/>
+		<xs:enumeration value="TIFF"/>
+		<xs:enumeration value="TXT"/>
+		<xs:enumeration value="WAV"/>
+		<xs:enumeration value="XLSX"/>
+		<xs:enumeration value="ZIP"/>
+		<xs:enumeration value="7Z"/>
+		<xs:enumeration value="other"/>
+	</xs:restriction>
+  </xs:simpleType>
+  
+<!--   <xs:simpleType name="language">
+	<xs:restriction base="xs:language">
+		<xs:enumeration value="en"/>
+		<xs:enumeration value="de"/>
+	</xs:restriction>
+  </xs:simpleType> -->
+  
+  <xs:simpleType name="layer">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="above ground"/>
+		<xs:enumeration value="below ground"/>
+	</xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="method">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="baited pitfall traps"/>
+		<xs:enumeration value="baits"/>
+		<xs:enumeration value="Baermann-funnel (Nematodes)"/>
+		<xs:enumeration value="bat recorders"/>
+		<xs:enumeration value="biomass measuring"/>	
+		<xs:enumeration value="camera traps"/>
+		<xs:enumeration value="canopy fogging"/>
+		<xs:enumeration value="canopy photography"/>
+		<xs:enumeration value="caterpillar dummies"/>
+		<xs:enumeration value="data loggers"/>
+		<xs:enumeration value="decomposition of tea bags"/>
+		<xs:enumeration value="drill dust analyses"/>
+		<xs:enumeration value="elemental analysis of soil C and N"/>
+		<xs:enumeration value="emergence traps"/>
+		<xs:enumeration value="epiphyte releves (lower tree trunks, downed logs)"/>
+		<xs:enumeration value="epiphyte species inventory (downed tree crowns)"/>
+		<xs:enumeration value="extracellular enzyme analysis"/>
+		<xs:enumeration value="fieldmap inventory"/>
+		<xs:enumeration value="flight interception traps"/>
+		<xs:enumeration value="fungi releves (lower tree trunks, downed logs)"/>
+		<xs:enumeration value="fungi species inventory (downed tree crowns)"/>
+		<xs:enumeration value="fungi species inventory (soil)"/>
+		<xs:enumeration value="ground vegetation releves"/>
+		<xs:enumeration value="image analysis"/>
+		<xs:enumeration value="insect exclusion"/>
+		<xs:enumeration value="leaf litter decomposition"/>
+		<xs:enumeration value="leaf sampling"/>
+		<xs:enumeration value="light traps"/>
+		<xs:enumeration value="litter traps"/>
+		<xs:enumeration value="malaise traps"/>
+		<xs:enumeration value="measuring basal area"/>
+		<xs:enumeration value="metabarcoding"/>
+		<xs:enumeration value="mobile laser scanning"/>
+		<xs:enumeration value="nest boxes"/>
+		<xs:enumeration value="pan traps"/>
+		<xs:enumeration value="PLFA analysis (Phospholipid fatty acid)"/>
+		<xs:enumeration value="popsickle sticks"/>
+		<xs:enumeration value="pitfall traps"/>
+		<xs:enumeration value="regeneration survey"/>
+		<xs:enumeration value="remote sensing"/>
+		<xs:enumeration value="root decomposition"/>
+		<xs:enumeration value="seed predation"/>
+		<xs:enumeration value="soil pH"/>
+		<xs:enumeration value="sound boxes"/>
+		<xs:enumeration value="standard substrate decomposition (paper)"/>
+		<xs:enumeration value="substrate-induced-respiration"/>
+		<xs:enumeration value="terrestrial laser scanning"/>
+		<xs:enumeration value="trap nests"/>
+		<xs:enumeration value="vegetation survey"/>
+		<xs:enumeration value="volatile analysis"/>
+		<xs:enumeration value="volatile organic compound sampling"/>
+		<xs:enumeration value="water-stable soil aggregates"/>
+		<xs:enumeration value="other"/>
+	</xs:restriction>
+  </xs:simpleType> 
+  
+  <xs:simpleType name="nameIdentifierScheme">
+	<xs:restriction base="xs:string">
+      <xs:enumeration value="ORCID" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- <xs:simpleType name="publisher">
+	<xs:restriction base="xs:string">
+      <xs:enumeration value="University of Würzburg" />
+    </xs:restriction>
+  </xs:simpleType> -->
+  
+  <xs:simpleType name="rightsIdentifier">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="CC0"/>
+		<xs:enumeration value="CC BY"/>
+		<xs:enumeration value="CC BY-ND"/>
+		<xs:enumeration value="CC BY-SA"/>
+		<xs:enumeration value="CC BY-NC"/>
+		<xs:enumeration value="CC BY-NC-SA"/>
+		<xs:enumeration value="CC BY-NC-ND"/>
+	</xs:restriction>
+  </xs:simpleType> 
+  
+  <xs:simpleType name="taxonomicTerm">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="Animals-Invertebrates-Annelids"/>
+		<xs:enumeration value="Animals-Invertebrates-Arachnids"/>
+		<xs:enumeration value="Animals-Invertebrates-Crustaceans"/>
+		<xs:enumeration value="Animals-Invertebrates-Insects"/>
+		<xs:enumeration value="Animals-Invertebrates-Molluscs"/>
+		<xs:enumeration value="Animals-Invertebrates-Monogenea"/>
+		<xs:enumeration value="Animals-Invertebrates-Nematodes"/>
+		<xs:enumeration value="Animals-Vertebrates-Amphibians"/>
+		<xs:enumeration value="Animals-Vertebrates-Birds"/>
+		<xs:enumeration value="Animals-Vertebrates-Fishes"/>
+		<xs:enumeration value="Animals-Vertebrates-Mammals"/>
+		<xs:enumeration value="Animals-Vertebrates-Reptiles"/>
+		<xs:enumeration value="Archaea"/>
+		<xs:enumeration value="Bacteria"/>
+		<xs:enumeration value="Fungi"/>
+		<xs:enumeration value="Plants-Angiosperms"/>
+		<xs:enumeration value="Plants-Bryophytes"/>
+		<xs:enumeration value="Plants-Gymnosperms"/>
+		<xs:enumeration value="Plants-Pteridophytes"/>
+		<xs:enumeration value="Protists (incl. green/brown/red algae)"/>
+		<xs:enumeration value="Viruses"/>
+	</xs:restriction>
+  </xs:simpleType> 
+  
+  <xs:simpleType name="text">
+	<xs:restriction base="xs:string">
+      <xs:minLength value="0" />
+      <xs:maxLength value="10000" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
