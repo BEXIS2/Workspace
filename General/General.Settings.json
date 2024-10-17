@@ -118,7 +118,7 @@
     {
       "key": "systemEmail",
       "title": "System E-Mail Address",
-      "value": "bexis-support@uni-jena.de",
+      "value": "bexis2-support@uni-jena.de",
       "type": "String",
       "description": "All administrative information will be sent to this email."
     },
@@ -134,7 +134,7 @@
       "title": "Use Multimedia Module?",
       "value": true,
       "type": "Boolean",
-      "description": "This flag truns on/off the Multimedia Module."
+      "description": "This flag turns on/off the Multimedia Module."
     },
     {
       "key": "usePersonEmailAttributeName",
