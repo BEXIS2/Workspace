@@ -97,7 +97,7 @@
     {
       "key": "landingPageForUsers",
       "title": "Landing Page for Users",
-      "value": "ddm, Home, index",
+      "value": "ddm, search, index",
       "type": "String",
       "description": "user logged in, but do not have permission to view the page; shell, home, nopermission is by default; Alternatives must be in a module NOT shell"
     },
@@ -118,7 +118,7 @@
     {
       "key": "systemEmail",
       "title": "System E-Mail Address",
-      "value": "david.schoene@uni-jena.de",
+      "value": "bexis-support@uni-jena.de",
       "type": "String",
       "description": "All administrative information will be sent to this email."
     },
