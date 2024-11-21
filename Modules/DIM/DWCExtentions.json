@@ -18,14 +18,14 @@
     "requiredFields": []
   },
   {
-    "name": "Humbolt",
-    "linkName": "HasHumbolt",
+    "name": "Humboldt",
+    "linkName": "HasHumboldt",
     "rowType": "Event",
-    "requiredFields": []
+    "requiredFields": ["eventID"]
   },
   {
-    "name": "EMof",
-    "linkName": "HasEMof",
+    "name": "EMoF",
+    "linkName": "HasEMoF",
     "rowType": "ExtendedMeasurementOrFact",
     "requiredFields": []
   }
