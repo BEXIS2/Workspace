@@ -24,8 +24,8 @@
     "requiredFields": ["eventID"]
   },
   {
-    "name": "EMoF",
-    "linkName": "HasEMoF",
+    "name": "EMof",
+    "linkName": "HasEMof",
     "rowType": "ExtendedMeasurementOrFact",
     "requiredFields": []
   }
