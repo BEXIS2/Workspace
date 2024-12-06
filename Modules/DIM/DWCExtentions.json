@@ -21,7 +21,7 @@
     "name": "Humboldt",
     "linkName": "HasHumboldt",
     "rowType": "Event",
-    "requiredFields": ["eventID"]
+    "requiredFields": [ "eventID" ]
   },
   {
     "name": "EMof",
