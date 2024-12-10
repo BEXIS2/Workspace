@@ -9,10 +9,10 @@
     <referenceType description="current dataset is derived from the linked dataset, e.g., synthesis dataset (IsDerivedFrom)">IsDerivedFrom</referenceType>
     <referenceType description="current dataset is a source of the linked dataset, e.g., synthesis dataset (IsSourceOf)">IsSourceOf</referenceType>
     <referenceType description="dataset is part of a collection (Collection)">Collection</referenceType>
-    <referenceType description="dwc:Occurence">HasOccurence</referenceType>
+    <referenceType description="dwc:Occurrence http://rs.tdwg.org/dwc/terms/Occurrence">HasOccurrence</referenceType>
     <referenceType description="dwc:Event: http://rs.tdwg.org/dwc/terms/Event">HasEvent</referenceType>
     <referenceType description="dwc:Taxon: http://rs.tdwg.org/dwc/terms/Taxon">HasTaxon</referenceType>
-    <referenceType description="is a darwin core humbolt extention of">HasHumbolt</referenceType>
+    <referenceType description="dwc:Humboldt">HasHumbolt</referenceType>
     <referenceType description="dwc:EMof">HasEMof</referenceType>
 </referenceTypes>
 
