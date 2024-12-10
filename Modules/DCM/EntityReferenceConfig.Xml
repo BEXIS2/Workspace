@@ -12,7 +12,7 @@
     <referenceType description="dwc:Occurrence http://rs.tdwg.org/dwc/terms/Occurrence">HasOccurrence</referenceType>
     <referenceType description="dwc:Event: http://rs.tdwg.org/dwc/terms/Event">HasEvent</referenceType>
     <referenceType description="dwc:Taxon: http://rs.tdwg.org/dwc/terms/Taxon">HasTaxon</referenceType>
-    <referenceType description="dwc:Humboldt">HasHumbolt</referenceType>
+    <referenceType description="dwc:Humboldt">HasHumboldt</referenceType>
     <referenceType description="dwc:EMof">HasEMof</referenceType>
 </referenceTypes>
 
