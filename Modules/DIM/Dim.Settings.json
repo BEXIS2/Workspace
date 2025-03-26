@@ -17,7 +17,8 @@
         "{DatasetId}": "{DatasetId}",
         "{VersionId}": "{VersionId}",
         "{VersionNumber}": "{VersionNumber}",
-        "{VersionName}": "{VersionName}"
+        "{VersionName}": "{VersionName}",
+        "{Tag}": "{Tag}"
       }
     },
     {
