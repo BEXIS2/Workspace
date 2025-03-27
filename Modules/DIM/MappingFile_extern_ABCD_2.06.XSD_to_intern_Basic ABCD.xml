@@ -63,12 +63,24 @@
       <destination xPath="Metadata/Metadata/MetadataType/Description/DescriptionType/Representation/MetadataDescriptionRepr/URI/URIType" sequence="MetadataDescriptionRepr" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Description/Representation/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Description/DescriptionType/Representation/MetadataDescriptionRepr/@language" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/IconURI" />
       <destination xPath="Metadata/Metadata/MetadataType/IconURI/IconURIType" sequence="MetadataType" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Scope/GeoecologicalTerms/GeoEcologicalTerm/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Scope/ScopeType/GeoecologicalTerms/GeoecologicalTermsType/GeoEcologicalTerm/GeoEcologicalTermType/@language" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/Scope/GeoecologicalTerms/GeoEcologicalTerm" />
       <destination xPath="Metadata/Metadata/MetadataType/Scope/ScopeType/GeoecologicalTerms/GeoecologicalTermsType/GeoEcologicalTerm/GeoEcologicalTermType" sequence="GeoEcologicalTermType" />
+    </route>
+    <route>
+      <source xPath="DataSets/DataSet/Metadata/Scope/TaxonomicTerms/TaxonomicTerm/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Scope/ScopeType/TaxonomicTerms/TaxonomicTermsType/TaxonomicTerm/TaxonomicTermType/@language" sequence="" />
     </route>
     <route>
       <source xPath="DataSets/DataSet/Metadata/Scope/TaxonomicTerms/TaxonomicTerm" />
@@ -115,6 +127,10 @@
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Organisation/Organisation/Name/Label/Representation/RepresentationType/Abbreviation/AbbreviationType" sequence="RepresentationType" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/Organisation/OrgUnits/OrgUnit/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Organisation/Organisation/OrgUnits/OrgUnitsType/OrgUnit/OrgUnitType/@language" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/Owners/Owner/Organisation/OrgUnits/OrgUnit" />
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Organisation/Organisation/OrgUnits/OrgUnitsType/OrgUnit/OrgUnitType" sequence="OrgUnitType" />
     </route>
@@ -147,6 +163,10 @@
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Person/PersonName/AtomisedName/AtomisedNameType/PreferredName/PreferredNameType" sequence="AtomisedNameType" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/Roles/Role/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Roles/RolesType/Role/RoleType/@language" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/Owners/Owner/Roles/Role" />
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/Roles/RolesType/Role/RoleType" sequence="RoleType" />
     </route>
@@ -163,12 +183,28 @@
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/TelephoneNumbers/TelephoneNumbersType/TelephoneNumber/TelephoneNumber/Device/DeviceType" sequence="TelephoneNumber" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/TelephoneNumbers/TelephoneNumber/UsageNotes/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/TelephoneNumbers/TelephoneNumbersType/TelephoneNumber/TelephoneNumber/UsageNotes/UsageNotesType/@language" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/Owners/Owner/TelephoneNumbers/TelephoneNumber/UsageNotes" />
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/TelephoneNumbers/TelephoneNumbersType/TelephoneNumber/TelephoneNumber/UsageNotes/UsageNotesType" sequence="TelephoneNumber" />
     </route>
     <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/TelephoneNumbers/TelephoneNumber/@preferred" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/TelephoneNumbers/TelephoneNumbersType/TelephoneNumber/TelephoneNumber/@preferred" sequence="" />
+    </route>
+    <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/EmailAddresses/EmailAddress/@preferred" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/EmailAddresses/EmailAddressesType/EmailAddress/EmailAddressType/@preferred" sequence="" />
+    </route>
+    <route>
       <source xPath="DataSets/DataSet/Metadata/Owners/Owner/EmailAddresses/EmailAddress" />
       <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/EmailAddresses/EmailAddressesType/EmailAddress/EmailAddressType" sequence="EmailAddressType" />
+    </route>
+    <route>
+      <source xPath="DataSets/DataSet/Metadata/Owners/Owner/URIs/URL/@preferred" />
+      <destination xPath="Metadata/Metadata/MetadataType/Owners/OwnersType/Owner/Contact/URIs/URIsType/URL/URLType/@preferred" sequence="" />
     </route>
     <route>
       <source xPath="DataSets/DataSet/Metadata/Owners/Owner/URIs/URL" />
@@ -189,6 +225,10 @@
     <route>
       <source xPath="DataSets/DataSet/Metadata/IPRStatements/IPRDeclarations/IPRDeclaration/URI" />
       <destination xPath="Metadata/Metadata/MetadataType/IPRStatements/IPRStatements/IPRDeclarations/IPRDeclarationsType/IPRDeclaration/Statement/URI/URIType" sequence="Statement" />
+    </route>
+    <route>
+      <source xPath="DataSets/DataSet/Metadata/IPRStatements/IPRDeclarations/IPRDeclaration/@language" />
+      <destination xPath="Metadata/Metadata/MetadataType/IPRStatements/IPRStatements/IPRDeclarations/IPRDeclarationsType/IPRDeclaration/Statement/@language" sequence="" />
     </route>
     <route>
       <source xPath="DataSets/DataSet/Metadata/IPRStatements/Copyrights/Copyright/Text" />
