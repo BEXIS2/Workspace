@@ -17,8 +17,8 @@ quantity, area specified;quantityPerArea;quantity, area specified;;;;;ratio;;;do
 quantity, mass specified;quantityPerMass;quantity, mass specified;;;;;ratio;;;double;1/kg;;;;;;
 temerature celsius skaled;temperature;temerature celsius skaled;;;;;interval, continuous;;;double;°C;;;;;;
 velocity;velocity;velocity in meter per second;;;;;ratio, continuous;;;double;m/s;;;;;;
-precipitation amount;rain;amount of precipitation;;;;;ratio, continuous;;;double;l/m^2;;;;;;1 l/m² = 1 mm
-precipitation rate;rainfall;intensity of rainfall in mm per h;;;;;ratio, continuous;;;double;l/(m^2 * h);;;;;;1 l/m² = 1 mm
+precipitation amount;rain;amount of precipitation;;;;;ratio, continuous;;;double;L/m^2;;;;;;1 l/m² = 1 mm
+precipitation rate;rainfall;intensity of rainfall in mm per h;;;;;ratio, continuous;;;double;L/(m^2*h);;;;;;1 l/m² = 1 mm
 percentage;percentage;relationship expressed as a fraction of 100;;;;;ratio, continuous;;;double;%;;;;;;
 per mille;permille;relationship expressed as a fraction of 1000;;;;;ratio, continuous;;;double;‰;;;;;;
 proportion;proportion;relationship, relations;;;;;ratio, continuous;;;double;none;;;;;;
