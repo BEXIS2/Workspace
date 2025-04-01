@@ -59,7 +59,7 @@ hour;h;time unit;time;Unknown;integer,double,decimal,non-negative long,non-negat
 cubic centimetre;cm^3;volume unit;volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1,00E-06;
 cubic metre;m^3;volume unit (base unit);volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
 millilitre;ml;volume unit;volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1,00E-03;
-litre;l;volume unit;volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1,00E-03;
+litre;L;volume unit;volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1,00E-03;
 microlitre;µl;volume unit;volume;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;0.000001;
 degree kelvin;°K;temperature unit (SI unit);temperature;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
 ampere;A;electric current unit (SI unit);electric current;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
@@ -102,3 +102,9 @@ Beaufort;Bft;Beaufort wind force scale unit;dimensionless;Unknown;integer,double
 ohm;Ω;electrical resistance unit;electrical resistance;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
 ampare houre;Ah;electric capacity unit;electric charge;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
 watt hour;Wh;energy unit;energy;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+candela;cd;luminous intensity unit (SI unit);luminous intensity;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+lumen;lm;luminous flux unit (SI unit);luminous flux;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+mol;mol;amount of substance unit (SI unit);amount of substance;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+litre per square metre;L/m^2;volume per area unit;volume per area;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+litre per square metre and houre;L/(m^2*h);volume per area and time unit;volume per area and time;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
+metre per square metre;m/m^2;length per area unit;length per area;Metric;integer,double,decimal,non-negative long,non-negative integer,number;attribute or variable;1;
