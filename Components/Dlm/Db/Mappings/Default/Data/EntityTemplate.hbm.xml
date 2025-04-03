@@ -23,7 +23,7 @@
 	<property name="Name" type="string">
 		<column name="Name" />
 	</property>
-<!-- description must be greater -->
+
 	<property name="Description" type="StringClob">
 		<column name="Description"  sql-type="text" />
 	</property>
