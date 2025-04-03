@@ -16,11 +16,11 @@
     </route>
     <route>
       <source xPath="Metadata/publication/Abstract" />
-      <destination xPath="Metadata/publication/publicationType/Abstract/AbstractType" sequence="publicationType" />
+      <destination xPath="Metadata/publication/publicationType/Abstract/AbstractType" sequence="AbstractType" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Authors" />
-      <destination xPath="Metadata/publication/publicationType/Authors/AuthorsType" sequence="publicationType" />
+      <source xPath="Metadata/publication/Author" />
+      <destination xPath="Metadata/publication/publicationType/Author/AuthorType" sequence="AuthorType" />
     </route>
     <route>
       <source xPath="Metadata/publication/Affiliations" />

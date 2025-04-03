@@ -39,14 +39,18 @@
 					<xs:documentation>Title of the Publication</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Abstract"
-						type="xs:string">
-				<xs:annotation>
+			<xs:element name="Abstract" maxOccurs="unbounded">
+						<xs:simpleType>
+										<xs:annotation>
 					<xs:documentation>Abstract of the Publication</xs:documentation>
 				</xs:annotation>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10000" />
+						</xs:restriction>
+						</xs:simpleType>
 			</xs:element>
-			<xs:element name="Authors"
-						type="xs:string">
+			<xs:element name="Author"
+						type="xs:string" maxOccurs="unbounded">
 				<xs:annotation>
 					<xs:documentation></xs:documentation>
 				</xs:annotation>
