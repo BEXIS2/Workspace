@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>   
+    <xs:element name="Metadata">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="publication"
+								type="publication">
+					<xs:annotation>
+						<xs:documentation></xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element	minOccurs="0" maxOccurs="unbounded" 
+							name="Resource"
+							type="Resource">
+					<xs:annotation>
+						<xs:documentation></xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+    </xs:element>
+
+	<xs:complexType name="publication">
+		<xs:sequence>
+			<xs:element name="Journal"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Journal name of the Publication</xs:documentation> 
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Title"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Title of the Publication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Abstract" maxOccurs="unbounded">
+						<xs:simpleType>
+										<xs:annotation>
+					<xs:documentation>Abstract of the Publication</xs:documentation>
+				</xs:annotation>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="10000" />
+						</xs:restriction>
+						</xs:simpleType>
+			</xs:element>
+			<xs:element name="Author"
+						type="xs:string" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Affiliations"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Curation" minOccurs="0"
+						type="curation">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Identifiers"
+						type="identifiers">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Type" 
+						type="xs:string">
+				<!--this must be the first item in the section-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="license"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="publication_date"
+						type="xs:date">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="preprint" minOccurs="0"
+						type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="pages" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="issue" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="volume" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="comment" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="keywords" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="supplementary_info" minOccurs="0"
+						type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Recourses" minOccurs="0"
+						type="recourses">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Resource">
+		<xs:sequence>
+			
+			<!--I woud suggest to make content of this section depending on Resources_Type by using construction "choice"
+			with 3 basic types.
+			
+			<xs:complexType name="Resource">
+				<xs:choice>
+					<xs:element name="ComputationalNotebook" type="codeResourceType" minOccurs="0"/>
+					<xs:element name="Workflow" type="codeResourceType" minOccurs="0"/>
+					<xs:element name="Dataset" type="dataResourceType" minOccurs="0"/>
+					<xs:element name="Report" type="documentResourceType" minOccurs="0"/>
+					... etc.
+				</xs:choice>
+			</xs:complexType>
+			
+			However, current UI renders this construction in horisontal chain.
+			-->
+
+			<xs:element name="Resources_Type"
+			type="resourcesType">
+				<!--I would suggest to use DataCite types
+				https://datacite-metadata-schema.readthedocs.io/en/4.5/appendices/appendix-1/resourceTypeGeneral/
+				the following types are important for me
+				
+				ComputationalNotebook
+				Workflow
+				Software
+				Dataset
+				Model
+				Collection
+				
+				-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="Name"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Title of the Publication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Language"
+						type="xs:string" minOccurs="0">
+				<!--This fiel is relevant for objects from the class Documents (Article, book, patent etc.)-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Access"
+						type="accessType">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+			<xs:element name="Submitted_By"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Alternative URI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Submission_Date"
+						type="xs:date">
+				<xs:annotation>
+					<xs:documentation>Abstract of the Publication</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Embargo" minOccurs="0"
+						type="xs:boolean">
+				<!--this should be a complex type with minOccur="0", and containing Embargo_End as the only element-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Embargo_End" minOccurs="0"
+								type="xs:date">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="File" minOccurs="0"
+								type="file">
+				<!--The type is not declared-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Code" minOccurs="0"
+								type="code">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="curation">
+		<xs:sequence>
+			<xs:element name="curated" minOccurs="0"
+						type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="rated_by"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="access_date"
+						type="xs:date">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="date_added"
+						type="xs:date">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="date_modified"
+						type="xs:date">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="identifiers">
+		<xs:sequence>
+			<xs:element name="isbn" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="issn" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="doi" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="uri" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="alt_uri" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Alternative URI</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="recourses">
+		<xs:sequence>
+			<xs:element name="data_availability" minOccurs="0"
+								type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="code_availability" minOccurs="0"
+						type="xs:boolean">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Data_code_availiablity_title" minOccurs="0"
+						type="xs:string" default="none" maxOccurs="unbounded">
+				<!--will be essential for ML tasks; conmbine to single block with the next element-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Data_code_availiablity_statement" minOccurs="0"
+						type="xs:string" default="none" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="file">
+		<xs:sequence>		
+			<xs:element name="SizeIn_MB"
+						type="xs:int" minOccurs="0">
+				<!--this info is not always easy accesable-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0"
+						name="File_Format"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0"
+						name="Data_Type"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="code">
+		<xs:sequence>
+			<xs:element minOccurs="0" maxOccurs="unbounded"
+								name="Code_Type"
+								type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element minOccurs="0" maxOccurs="unbounded"
+						name="Programing_Language"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="accessType">
+		<xs:sequence>
+			<xs:element name="URI" minOccurs="0"
+								type="xs:anyURI">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="URI_Health" minOccurs="0"
+						type="xs:string">
+				<!-- why not boolean?				-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DOI" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="DOI_Health" minOccurs="0"
+						type="xs:string">
+				<!-- why not boolean?				-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Repository_Name" minOccurs="0"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Licence"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+
+  <xs:simpleType name="publicationType">
+	  <!--Decypher it!
+	  
+	  this are just placeholders i need more input-->
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="tpye 1"/>
+      <xs:enumeration value="tpye 2"/>
+      <xs:enumeration value="tpye 3"/>
+      <xs:enumeration value="tpye 4"/>
+      <xs:enumeration value="tpye 5"/>
+      <xs:enumeration value="tpye 6"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+	<xs:simpleType name="resourcesType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ComputationalNotebook"/>
+			<xs:enumeration value="Workflow"/>
+			<xs:enumeration value="Software"/>
+			<xs:enumeration value="Dataset"/>
+			<xs:enumeration value="Model"/>
+			<xs:enumeration value="Collection"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<!--<xs:simpleType name="fileFormat">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tpye 1"/>
+			<xs:enumeration value="tpye 2"/>
+			<xs:enumeration value="tpye 3"/>
+			<xs:enumeration value="tpye 4"/>
+			<xs:enumeration value="tpye 5"/>
+			<xs:enumeration value="tpye 6"/>
+		</xs:restriction>
+	</xs:simpleType>-->
+
+	<xs:simpleType name="dataType">
+		<!--decypher!
+		I can provide the list of most common types in microbiology (13 items).
+		
+		just put the list in the repo-->
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tpye 1"/>
+			<xs:enumeration value="tpye 2"/>
+			<xs:enumeration value="tpye 3"/>
+			<xs:enumeration value="tpye 4"/>
+			<xs:enumeration value="tpye 5"/>
+			<xs:enumeration value="tpye 6"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="codeType">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tpye 1"/>
+			<xs:enumeration value="tpye 2"/>
+			<xs:enumeration value="tpye 3"/>
+			<xs:enumeration value="tpye 4"/>
+			<xs:enumeration value="tpye 5"/>
+			<xs:enumeration value="tpye 6"/>
+		</xs:restriction>
+	</xs:simpleType>
+
+	<xs:simpleType name="programingLanguage">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="tpye 1"/>
+			<xs:enumeration value="tpye 2"/>
+			<xs:enumeration value="tpye 3"/>
+			<xs:enumeration value="tpye 4"/>
+			<xs:enumeration value="tpye 5"/>
+			<xs:enumeration value="tpye 6"/>
+		</xs:restriction>
+	</xs:simpleType>
+  
+</xs:schema>
