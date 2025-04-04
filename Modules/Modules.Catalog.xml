@@ -3,7 +3,7 @@
   <!-- status is active, inactive, pending-->
   <Module id="sam" status="active" order="1" />
   <Module id="ddm" status="active" order="2" />
-  <Module id="dcm" status="active" order="3"/>
+  <Module id="dcm" status="active" order="3" />
   <!-- <Module id="dcm" status="active" order="3" path="BExIS.Modules.Dcm.UI" /> -->
   <Module id="rpm" status="active" order="4" />
   <Module id="bam" status="active" order="5" />

@@ -1,0 +1,198 @@
+<mapping name="Publication">
+  <header>
+    <destination namespaceUri="" prefix="Metadata" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="Publication" url="Metadata/Publication/BEXIS2-Publication-Schema-draft.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Journal/JournalType" />
+      <destination xPath="Metadata/publication/Journal" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Title/TitleType" />
+      <destination xPath="Metadata/publication/Title" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Abstract/AbstractType" />
+      <destination xPath="Metadata/publication/Abstract" sequence="Abstract" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Author/AuthorType" />
+      <destination xPath="Metadata/publication/Author" sequence="Author" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Affiliations/AffiliationsType" />
+      <destination xPath="Metadata/publication/Affiliations" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Curation/curation/curated/curatedType" />
+      <destination xPath="Metadata/publication/Curation/curated" sequence="Curation" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Curation/curation/rated_by/rated_byType" />
+      <destination xPath="Metadata/publication/Curation/rated_by" sequence="Curation" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Curation/curation/access_date/access_dateType" />
+      <destination xPath="Metadata/publication/Curation/access_date" sequence="Curation" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Curation/curation/date_added/date_addedType" />
+      <destination xPath="Metadata/publication/Curation/date_added" sequence="Curation" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Curation/curation/date_modified/date_modifiedType" />
+      <destination xPath="Metadata/publication/Curation/date_modified" sequence="Curation" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Identifiers/identifiers/isbn/isbnType" />
+      <destination xPath="Metadata/publication/Identifiers/isbn" sequence="Identifiers" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Identifiers/identifiers/issn/issnType" />
+      <destination xPath="Metadata/publication/Identifiers/issn" sequence="Identifiers" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Identifiers/identifiers/doi/doiType" />
+      <destination xPath="Metadata/publication/Identifiers/doi" sequence="Identifiers" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Identifiers/identifiers/uri/uriType" />
+      <destination xPath="Metadata/publication/Identifiers/uri" sequence="Identifiers" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Identifiers/identifiers/alt_uri/alt_uriType" />
+      <destination xPath="Metadata/publication/Identifiers/alt_uri" sequence="Identifiers" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Type/TypeType" />
+      <destination xPath="Metadata/publication/Type" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/license/licenseType" />
+      <destination xPath="Metadata/publication/license" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/publication_date/publication_dateType" />
+      <destination xPath="Metadata/publication/publication_date" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/preprint/preprintType" />
+      <destination xPath="Metadata/publication/preprint" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/pages/pagesType" />
+      <destination xPath="Metadata/publication/pages" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/issue/issueType" />
+      <destination xPath="Metadata/publication/issue" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/volume/volumeType" />
+      <destination xPath="Metadata/publication/volume" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/comment/commentType" />
+      <destination xPath="Metadata/publication/comment" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/keywords/keywordsType" />
+      <destination xPath="Metadata/publication/keywords" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/supplementary_info/supplementary_infoType" />
+      <destination xPath="Metadata/publication/supplementary_info" sequence="publication" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Recourses/recourses/data_availability/data_availabilityType" />
+      <destination xPath="Metadata/publication/Recourses/data_availability" sequence="Recourses" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Recourses/recourses/code_availability/code_availabilityType" />
+      <destination xPath="Metadata/publication/Recourses/code_availability" sequence="Recourses" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Recourses/recourses/Data_code_availiablity_title/Data_code_availiablity_titleType" />
+      <destination xPath="Metadata/publication/Recourses/Data_code_availiablity_title" sequence="Data_code_availiablity_title" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/publicationType/Recourses/recourses/Data_code_availiablity_statement/Data_code_availiablity_statementType" />
+      <destination xPath="Metadata/publication/Recourses/Data_code_availiablity_statement" sequence="Data_code_availiablity_statement" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Resources_Type/Resources_TypeType" />
+      <destination xPath="Metadata/Resource/Resources_Type" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Name/NameType" />
+      <destination xPath="Metadata/Resource/Name" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Language/LanguageType" />
+      <destination xPath="Metadata/Resource/Language" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/URI/URIType" />
+      <destination xPath="Metadata/Resource/Access/URI" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/URI_Health/URI_HealthType" />
+      <destination xPath="Metadata/Resource/Access/URI_Health" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/DOI/DOIType" />
+      <destination xPath="Metadata/Resource/Access/DOI" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/DOI_Health/DOI_HealthType" />
+      <destination xPath="Metadata/Resource/Access/DOI_Health" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/Repository_Name/Repository_NameType" />
+      <destination xPath="Metadata/Resource/Access/Repository_Name" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Access/accessType/Licence/LicenceType" />
+      <destination xPath="Metadata/Resource/Access/Licence" sequence="Access" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Submitted_By/Submitted_ByType" />
+      <destination xPath="Metadata/Resource/Submitted_By" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Submission_Date/Submission_DateType" />
+      <destination xPath="Metadata/Resource/Submission_Date" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Embargo/EmbargoType" />
+      <destination xPath="Metadata/Resource/Embargo" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Embargo_End/Embargo_EndType" />
+      <destination xPath="Metadata/Resource/Embargo_End" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/File/file/SizeIn_MB/SizeIn_MBType" />
+      <destination xPath="Metadata/Resource/File/SizeIn_MB" sequence="File" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/File/file/File_Format/File_FormatType" />
+      <destination xPath="Metadata/Resource/File/File_Format" sequence="File" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/File/file/Data_Type/Data_TypeType" />
+      <destination xPath="Metadata/Resource/File/Data_Type" sequence="File" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Code/code/Code_Type/Code_TypeType" />
+      <destination xPath="Metadata/Resource/Code/Code_Type" sequence="Code_Type" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/ResourceType/Code/code/Programing_Language/Programing_LanguageType" />
+      <destination xPath="Metadata/Resource/Code/Programing_Language" sequence="Programing_Language" />
+    </route>
+  </routes>
+</mapping>
