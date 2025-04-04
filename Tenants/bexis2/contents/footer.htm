@@ -1,62 +1,125 @@
-<div id="footer" class="grid w-full justify-center text-center gap-2 text-surface-700 py-5">
 
- <div id="footer-label" class="text-md">Powered by</div>
 
- <div class="flex w-full justify-center items-center">
-  <a href="http://bexis2.uni-jena.de" target="_blank" >
-    <img src="/Home/GetImage?image=logo.png" style="width:200px;"/>
-  </a>
- </div>
+<footer id="footer" class="w-full flex p-5">
+ 
+  <div class="text-surface-700 text-sm flex gap-2">
+    <a href="/footer/policy" title="Provacy Policy" >Privacy Policy</a>
+    <span>|</span>
+    <a href="/footer/termsandconditions" title="Terms and Condotions">Terms and Conditions</a>
+    <span>|</span>
+    <a href="/footer/Contact Us" title="Contact information">Contact Us</a>
+    <span>|</span>
+    <a href="/footer/Imprint" title="Imprint">Imprint</a>
+    <span>|</span>
+    <a href="https://github.com/BEXIS2/Documents/blob/master/Accessibility.md" target="_blank" title="Accessibility statement">Accessibility</a>
+  </div>
 
- <div class="text-surface-700 text-sm">
-   <a href="/footer/policy">Privacy Policy</a>
-   <a href="/footer/termsandconditions">Terms and Conditions</a>
-   <a href="/footer/Contact Us">Contact Us</a>
-   <a href="/footer/Imprint">Imprint</a>
- </div>
-</div>
+  
+ 	<div class="flex grow justify-end">
+ 		<a href="http://bexis2.uni-jena.de" target="_blank" >
+ 		  <img src="/Home/GetImage?image=logo.png" style="width:100px;" alt="Website of the underlying software (BEXIS2)" />
+ 		</a>
+ 	</div>
+
+ 	<!-- <div class="w-px bg-placeholder"></div>
+ 	<a href="/footer/policy">Privacy Policy</a>
+ 	<div class="w-px bg-placeholder"></div>
+ 	<a href="/footer/termsandconditions">Terms and Conditions</a>
+ 	<div class="w-px bg-placeholder"></div>
+ 	<a href="/footer/Contact Us">Contact Us</a>
+ 	<div class="w-px bg-placeholder"></div>
+ 	<a href="/footer/Imprint">Imprint</a>
+ 	<div class="w-px bg-placeholder"></div>
+ 	<a href="https://github.com/BEXIS2/Documents/blob/master/Accessibility.md" target="_blank">Accessibility</a> -->
+</footer>
+		
 <style>
 
-  #footer.flex{
+  .flex{
     display: flex;
   }
 
-  #footer-label.text-md{
-    font-size:16px;
-    color:#929292;
+  #footer{
+    padding: 10px 15px;
+
   }
 
-  #footer.items-center
-  {
-    align-items: center;
+  #footer .justify-end{
+    justify-content: flex-end;
   }
 
-  #footer.grid{
-	  display: grid;
-    color:var(--color-surface-700);
-  }
-
-  #footer.w-full{
+  #footer .w-full{
     width: 100%;
   }
 
-  #footer.justify-centerl{
-    justify-content: center;
-  }
 
-  #footer.text-center{
+  #footer .text-center{
     text-align: center;
   }
 
-  #footer.gap-2{
+  #footer .gap-2{
     gap: 10px; /* 8px */
   }
 
-  #footer.py-5
-  {
-    padding-top: 20px; /* 20px */
-    padding-bottom: 20px; /* 20px */
+  #footer .grow{
+    flex-grow: 1;
   }
 
+  #footer .text-surface-700 {
+    color: var(--color-surface-700);
+  }
+
+  #footer .px-20 {
+      padding-left: 5rem;
+      padding-right: 5rem;
+  }
+ 
+  #footer .py-6 {
+     padding-top: 1.5rem;
+     padding-bottom: 1.5rem;
+  }
+
+  #footer .py-2 {
+     padding-top: 0.5rem;
+     padding-bottom: 0.5rem;
+  }
+
+  #footer .p-2 {
+     padding: 0.5rem;
+  }
+
+  #footer .p-5 {
+     padding: 1.25rem;
+  }
+
+
+ #footer .gap-2 {
+     gap: 0.5rem;
+ }
+ 
+ #footer .border-t {
+     border-top-width: 1px;
+ }
+ 
+ #footer .gap-8 {
+     gap: 2rem;
+ }
+ 
+ #footer .w-full {
+     width: 100%;
+ }
+ 
+ #footer .flex {
+     display: flex;
+ }
+ 
+ #footer .items-center {
+     align-items: center;
+ }
+ 
+ #footer .w-px {
+     width: 1px;
+ }
+ 
 
 </style>
