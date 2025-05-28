@@ -1,14 +1,8 @@
 Name;Description;System Type;Display Pattern
-string;A unicode string;String;
-double;A real number;Double;
-decimal;A precise real number with a restricted range;Decimal;
-integer;An 32 bit integer number;Int32;
-long;An 64 bit integer number;Int64;
-non-negative long;An 64 bit integer number greater then 0;UInt64;
-non-negative integer;An 32 bit integer number greater then 1;UInt32;
-number;An 16 bit integer number;Int16;
-bool;A boolean value;Boolean;
-datetime;A date with / or time;DateTime;
-text;For a long text;String;
-date;A date;DateTime;DateIso
-time;A time;DateTime;Time
+Text;A unicode string;String;
+Floating Point Number;A precise real number with a restricted range;Double;
+Integer;An 64 bit integer number;Int64;
+Boolean;A boolean value;Boolean;
+Date and Time;A date with / or time;DateTime;
+Date;A date;DateTime;DateIso
+Time;A time;DateTime;Time
