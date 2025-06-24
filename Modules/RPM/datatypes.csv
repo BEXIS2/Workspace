@@ -1,5 +1,6 @@
 Name;Description;System Type;Display Pattern
-Text;A unicode string;String;
+String;A unicode string;String;
+Text; Contains several sentences;String;
 Floating Point Number;A precise real number with a restricted range;Double;
 Integer;An 64 bit integer number;Int64;
 Boolean;A boolean value;Boolean;
