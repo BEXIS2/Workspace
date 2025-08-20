@@ -1,5 +1,5 @@
 Name (final);Abbreviation;Description;DimensionName;Measurement System;Data Types;used by;conversion to SI;remark
-none;none;no unit used;dimensionless;Unknown;string,Integer,Floating Point Number, Boolean,Text,Date,Time,Date and Time;attribute or variable;0;
+none;none;no unit used;dimensionless;Unknown;String,Integer,Floating Point Number,Boolean,Text,Date,Time,Date and Time;attribute or variable;0;
 micromol per square metre and second;µmol/(m^2*s);amount of substance per area and time unit;amount per area time;Metric;Integer,Floating Point Number;attribute or variable;1,00E-06;
 nanomol per gram;nmol/g;amount of substance per mass unit;amount per mass;Metric;Integer,Floating Point Number;attribute or variable;0.000000001;
 micromol per gram;µmol/g;amount of substance per mass unit;amount per mass;Metric;Integer,Floating Point Number;attribute or variable;1,00E-03;
