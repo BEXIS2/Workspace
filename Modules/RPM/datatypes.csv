@@ -1,14 +1,9 @@
 Name;Description;System Type;Display Pattern
-string;A unicode string;String;
-double;A real number;Double;
-decimal;A precise real number with a restricted range;Decimal;
-integer;An 32 bit integer number;Int32;
-long;An 64 bit integer number;Int64;
-non-negative long;An 64 bit integer number greater then 0;UInt64;
-non-negative integer;An 32 bit integer number greater then 1;UInt32;
-number;An 16 bit integer number;Int16;
-bool;A boolean value;Boolean;
-datetime;A date with / or time;DateTime;
-text;For a long text;String;
-date;A date;DateTime;DateIso
-time;A time;DateTime;Time
+String;A sequence of characters, such as letters, numbers, or symbols (e.g., IDs).;String;
+Text; A special data type for very long sequences of character.;String;
+Floating Point Number;A floating-point number with double precision (for decimal values, e.g., 3.14159).;Double;
+Integer;A data type for whole numbers. In this case, it corresponds to Int64, a 64-bit integer that can represent large values.;Int64;
+Boolean;A logical data type with only two possible values: true or false; 0 or 1.;Boolean;
+Date and Time;A data type for storing both a calendar date and a time.;DateTime;
+Date;A data type for storing a calendar date without time.;DateTime;DateIso
+Time;A data type for storing a time of day without a date.;DateTime;Time
