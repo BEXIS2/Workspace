@@ -11,6 +11,10 @@
       <destination xPath="Metadata/Basic/BasicType/alternateIdentifier/alternateIdentifierType" sequence="alternateIdentifierType" />
     </route>
     <route>
+      <source xPath="eml/dataset/title/@" />
+      <destination xPath="Metadata/Basic/BasicType/title/titleType/@" sequence="" />
+    </route>
+    <route>
       <source xPath="eml/dataset/title" />
       <destination xPath="Metadata/Basic/BasicType/title/titleType" sequence="titleType" />
     </route>
@@ -191,6 +195,10 @@
       <destination xPath="Metadata/intellectualRights/intellectualRightsType/para/paraType" sequence="intellectualRightsType" />
     </route>
     <route>
+      <source xPath="eml/dataset/distribution/online/url/@function" />
+      <destination xPath="Metadata/distribution/distributionType/online/onlineType/url/urlType/@function" sequence="" />
+    </route>
+    <route>
       <source xPath="eml/dataset/distribution/online/url" />
       <destination xPath="Metadata/distribution/distributionType/online/onlineType/url/urlType" sequence="onlineType" />
     </route>
@@ -295,16 +303,16 @@
       <destination xPath="Metadata/contact/contactType/onlineUrl/onlineUrlType" sequence="contactType" />
     </route>
     <route>
-      <source xPath="eml/dataset/methods/methodStep/description/para" />
-      <destination xPath="Metadata/methods/methodsType/methodStep/description/description/descriptionType/para/paraType" sequence="paraType" />
+      <source xPath="eml/dataset/methods/methodStep/description" />
+      <destination xPath="Metadata/methods/methodsType/methodStep/description/description/descriptionType" sequence="description" />
     </route>
     <route>
-      <source xPath="eml/dataset/methods/qualityControl/description/para" />
-      <destination xPath="Metadata/methods/methodsType/qualityControl/description/description/descriptionType/para/paraType" sequence="paraType" />
+      <source xPath="eml/dataset/methods/qualityControl/description" />
+      <destination xPath="Metadata/methods/methodsType/qualityControl/description/description/descriptionType" sequence="description" />
     </route>
     <route>
-      <source xPath="eml/dataset/methods/sampling/studyExtent/description/para" />
-      <destination xPath="Metadata/methods/methodsType/sampling/samplingType/studyExtent/description/description/descriptionType/para/paraType" sequence="paraType" />
+      <source xPath="eml/dataset/methods/sampling/studyExtent/description" />
+      <destination xPath="Metadata/methods/methodsType/sampling/samplingType/studyExtent/description/description/descriptionType" sequence="description" />
     </route>
     <route>
       <source xPath="eml/dataset/methods/sampling/samplingDescription/para" />
@@ -375,8 +383,16 @@
       <destination xPath="Metadata/project/projectType/studyAreaDescription/studyAreaDescriptionType/descriptor/descriptorType/descriptorValue/descriptorValueType" sequence="descriptorType" />
     </route>
     <route>
-      <source xPath="eml/dataset/project/designDescription/description/para" />
-      <destination xPath="Metadata/project/projectType/designDescription/description/description/descriptionType/para/paraType" sequence="paraType" />
+      <source xPath="eml/dataset/project/studyAreaDescription/descriptor/@citableClassificationSystem" />
+      <destination xPath="Metadata/project/projectType/studyAreaDescription/studyAreaDescriptionType/descriptor/descriptorType/@citableClassificationSystem" sequence="" />
+    </route>
+    <route>
+      <source xPath="eml/dataset/project/studyAreaDescription/descriptor/@name" />
+      <destination xPath="Metadata/project/projectType/studyAreaDescription/studyAreaDescriptionType/descriptor/descriptorType/@name" sequence="" />
+    </route>
+    <route>
+      <source xPath="eml/dataset/project/designDescription/description" />
+      <destination xPath="Metadata/project/projectType/designDescription/description/description/descriptionType" sequence="description" />
     </route>
   </routes>
 </mapping>
