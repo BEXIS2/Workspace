@@ -43,6 +43,20 @@
             "type": "Boolean",
             "value": false
         },
+    {
+      "key": "curation",
+      "title": "Configuration Settings for Curation",
+      "value": {
+        "curationLabels": [
+          {
+            "name": "custom-label-1",
+            "color": "#ff0000"
+          }
+        ]
+      },
+      "type": "JSON",
+      "description": "This is the description"
+    },
         {
             "key": "citationSettings",
             "title": "settings for citations",
