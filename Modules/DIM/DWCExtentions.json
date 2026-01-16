@@ -9,7 +9,7 @@
     "name": "Event",
     "linkName": "HasEvent",
     "rowType": "https://rs.tdwg.org/dwc/terms/Event",
-    "requiredFields": [ "eventID", "eventDate", "samplingProtocol", "sampleSizeValue", "sampleSizeUnit" ]
+    "requiredFields": [ "eventID", "eventDate", "samplingProtocol", "samplingSizeValue", "samplingSizeUnit" ]
   },
   {
     "name": "Taxon",
