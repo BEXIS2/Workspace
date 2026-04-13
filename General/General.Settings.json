@@ -11,15 +11,34 @@
       "description": "(Short) name of the BEXIS2 instance. The name is e.g., used in the breadcrumb or as prefix in emails sent via the system. Avoid special characters or to long names."
     },
     {
+      "key": "security",
+      "title": "Security",
+      "value": {
+        "userValidatorConfiguration": {
+          "allowOnlyAlphanumericUserNames": true,
+          "requireUniqueEmail": true
+        },
+        "passwordValidatorConfiguration": {
+          "requiredLength": 8,
+          "requireDigit": true,
+          "requireLowercase": true,
+          "requireUppercase": true,
+          "requireNonAlphanumeric": false
+        }
+      },
+      "type": "JSON",
+      "description": "Security Settings."
+    },
+    {
       "key": "jwt",
       "title": "JWT",
       "value": {
-        "validateAudience": false,
-        "validateIssuer": false,
+        "validateAudience": true,
+        "validateIssuer": true,
         "validAudience": "http://localhost:3000",
         "validIssuer": "https://localhost:7041",
-        "issuerSigningKey": "JWTAuthenticationHIGHsecuredPasswordVVVp1OH7Xzyr",
-        "validateLifetime": false,
+        "issuerSigningKey": "",
+        "validateLifetime": true,
         "validLifetime": 1
       },
       "type": "JSON",
