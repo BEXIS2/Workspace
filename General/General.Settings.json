@@ -37,7 +37,7 @@
         "validateIssuer": true,
         "validAudience": "http://localhost:3000",
         "validIssuer": "https://localhost:7041",
-        "issuerSigningKey": "",
+        "issuerSigningKey": "12345678",
         "validateLifetime": true,
         "validLifetime": 1
       },
