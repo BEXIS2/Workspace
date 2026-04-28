@@ -16,15 +16,15 @@
     </route>
     <route>
       <source xPath="Metadata/publication/Abstract" />
-      <destination xPath="Metadata/publication/publication/Abstract/AbstractXmlSchemaSimpleType" sequence="AbstractXmlSchemaSimpleType" />
+      <destination xPath="Metadata/publication/publication/Abstract/AbstractDatatype_string" sequence="publication" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Author" />
-      <destination xPath="Metadata/publication/publication/Author/AuthorDatatype_string" sequence="AuthorDatatype_string" />
+      <source xPath="Metadata/publication/Authors" />
+      <destination xPath="Metadata/publication/publication/Authors/AuthorsDatatype_string" sequence="AuthorsDatatype_string" />
     </route>
     <route>
       <source xPath="Metadata/publication/Affiliations" />
-      <destination xPath="Metadata/publication/publication/Affiliations/AffiliationsDatatype_string" sequence="publication" />
+      <destination xPath="Metadata/publication/publication/Affiliations/AffiliationsDatatype_string" sequence="AffiliationsDatatype_string" />
     </route>
     <route>
       <source xPath="Metadata/publication/Curation/curated" />
@@ -107,20 +107,24 @@
       <destination xPath="Metadata/publication/publication/supplementary_info/supplementary_infoDatatype_boolean" sequence="publication" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Recourses/data_availability" />
-      <destination xPath="Metadata/publication/publication/Recourses/recourses/data_availability/data_availabilityDatatype_boolean" sequence="recourses" />
+      <source xPath="Metadata/publication/Resource/has_data" />
+      <destination xPath="Metadata/publication/publication/Resource/resource/has_data/yesNoUnknown" sequence="resource" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Recourses/code_availability" />
-      <destination xPath="Metadata/publication/publication/Recourses/recourses/code_availability/code_availabilityDatatype_boolean" sequence="recourses" />
+      <source xPath="Metadata/publication/Resource/data_availability" />
+      <destination xPath="Metadata/publication/publication/Resource/resource/data_availability/data_availabilityDatatype_boolean" sequence="resource" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Recourses/Data_code_availiablity_title" />
-      <destination xPath="Metadata/publication/publication/Recourses/recourses/Data_code_availiablity_title/Data_code_availiablity_titleDatatype_string" sequence="Data_code_availiablity_titleDatatype_string" />
+      <source xPath="Metadata/publication/Resource/code_availability" />
+      <destination xPath="Metadata/publication/publication/Resource/resource/code_availability/code_availabilityDatatype_boolean" sequence="resource" />
     </route>
     <route>
-      <source xPath="Metadata/publication/Recourses/Data_code_availiablity_statement" />
-      <destination xPath="Metadata/publication/publication/Recourses/recourses/Data_code_availiablity_statement/Data_code_availiablity_statementDatatype_string" sequence="Data_code_availiablity_statementDatatype_string" />
+      <source xPath="Metadata/publication/Resource/Data_code_availiablity_title" />
+      <destination xPath="Metadata/publication/publication/Resource/resource/Data_code_availiablity_title/Data_code_availiablity_titleDatatype_string" sequence="Data_code_availiablity_titleDatatype_string" />
+    </route>
+    <route>
+      <source xPath="Metadata/publication/Resource/Data_code_availiablity_statement" />
+      <destination xPath="Metadata/publication/publication/Resource/resource/Data_code_availiablity_statement/Data_code_availiablity_statementDatatype_string" sequence="Data_code_availiablity_statementDatatype_string" />
     </route>
     <route>
       <source xPath="Metadata/Resource/Resources_Type" />
@@ -131,8 +135,16 @@
       <destination xPath="Metadata/Resource/Resource/Name/NameDatatype_string" sequence="Resource" />
     </route>
     <route>
+      <source xPath="Metadata/Resource/Publisher" />
+      <destination xPath="Metadata/Resource/Resource/Publisher/PublisherDatatype_string" sequence="Resource" />
+    </route>
+    <route>
       <source xPath="Metadata/Resource/Language" />
       <destination xPath="Metadata/Resource/Resource/Language/LanguageDatatype_string" sequence="Resource" />
+    </route>
+    <route>
+      <source xPath="Metadata/Resource/Accession_Number" />
+      <destination xPath="Metadata/Resource/Resource/Accession_Number/Accession_NumberDatatype_string" sequence="Resource" />
     </route>
     <route>
       <source xPath="Metadata/Resource/Access/URI" />
