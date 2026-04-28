@@ -14,6 +14,7 @@
     <referenceType description="has dwc:Taxon extension">HasTaxon</referenceType>
     <referenceType description="has dwc:Humboldt extension">HasHumboldt</referenceType>
     <referenceType description="has dwc:EMof extension">HasEMof</referenceType>
+    <referenceType description="has dwc:Mof extension">HasMof</referenceType>
 </referenceTypes>
 
 <!--Whitelist for entity types. Please configure if you need to hide entities from the list
