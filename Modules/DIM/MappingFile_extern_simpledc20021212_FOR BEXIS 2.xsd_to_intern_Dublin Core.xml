@@ -1,0 +1,130 @@
+<mapping name="Dublin Core">
+  <header>
+    <destination namespaceUri="" prefix="" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="Dublin Core" url="Metadata/Dublin Core/simpledc20021212_FOR BEXIS 2.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="metadata/title/@" />
+      <destination xPath="Metadata/metadata/title/titleType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/title" />
+      <destination xPath="Metadata/metadata/title/titleType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/creator/@" />
+      <destination xPath="Metadata/metadata/creator/creatorType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/creator" />
+      <destination xPath="Metadata/metadata/creator/creatorType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/subject/@" />
+      <destination xPath="Metadata/metadata/subject/subjectType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/subject" />
+      <destination xPath="Metadata/metadata/subject/subjectType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/description/@" />
+      <destination xPath="Metadata/metadata/description/descriptionType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/description" />
+      <destination xPath="Metadata/metadata/description/descriptionType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/publisher/@" />
+      <destination xPath="Metadata/metadata/publisher/publisherType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/publisher" />
+      <destination xPath="Metadata/metadata/publisher/publisherType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/contributor/@" />
+      <destination xPath="Metadata/metadata/contributor/contributorType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/contributor" />
+      <destination xPath="Metadata/metadata/contributor/contributorType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/date/@" />
+      <destination xPath="Metadata/metadata/date/dateType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/date" />
+      <destination xPath="Metadata/metadata/date/dateType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/type/@" />
+      <destination xPath="Metadata/metadata/type/typeType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/type" />
+      <destination xPath="Metadata/metadata/type/typeType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/format/@" />
+      <destination xPath="Metadata/metadata/format/formatType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/format" />
+      <destination xPath="Metadata/metadata/format/formatType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/identifier/@" />
+      <destination xPath="Metadata/metadata/identifier/identifierType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/identifier" />
+      <destination xPath="Metadata/metadata/identifier/identifierType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/source/@" />
+      <destination xPath="Metadata/metadata/source/sourceType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/source" />
+      <destination xPath="Metadata/metadata/source/sourceType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/language/@" />
+      <destination xPath="Metadata/metadata/language/languageType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/language" />
+      <destination xPath="Metadata/metadata/language/languageType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/relation/@" />
+      <destination xPath="Metadata/metadata/relation/relationType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/relation" />
+      <destination xPath="Metadata/metadata/relation/relationType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/coverage/@" />
+      <destination xPath="Metadata/metadata/coverage/coverageType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/coverage" />
+      <destination xPath="Metadata/metadata/coverage/coverageType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/rights/@" />
+      <destination xPath="Metadata/metadata/rights/rightsType/@" sequence="" />
+    </route>
+    <route>
+      <source xPath="metadata/rights" />
+      <destination xPath="Metadata/metadata/rights/rightsType" sequence="metadata" />
+    </route>
+  </routes>
+</mapping>
