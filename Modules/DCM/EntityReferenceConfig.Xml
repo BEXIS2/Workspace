@@ -1,0 +1,25 @@
+<config>
+<referenceTypes>
+    <referenceType description="dataset is used in this publication (IsSupplementTo)">IsSupplementTo</referenceType>
+    <referenceType description="publication uses this dataset (IsSupplementedBy)">IsSupplementedBy</referenceType>
+    <referenceType description="current dataset is a newer version of the linked dataset (IsNewVersionOf)">IsNewVersionOf</referenceType>
+    <referenceType description="current dataset is an older version of the linked dataset (IsPreviousVersionOf)">IsPreviousVersionOf</referenceType>
+    <referenceType description="current datasets is continued by the linked dataset, e.g., for time series (IsContinuedBy)">IsContinuedBy</referenceType>
+    <referenceType description="current dataset continues the linked dataset, e.g., time series (Continues)">Continues</referenceType>
+    <referenceType description="current dataset is derived from the linked dataset, e.g., synthesis dataset (IsDerivedFrom)">IsDerivedFrom</referenceType>
+    <referenceType description="current dataset is a source of the linked dataset, e.g., synthesis dataset (IsSourceOf)">IsSourceOf</referenceType>
+    <referenceType description="dataset is part of a collection (Collection)">Collection</referenceType>
+    <referenceType description="has dwc:Occurrence extension">HasOccurrence</referenceType>
+    <referenceType description="has dwc:Event extension">HasEvent</referenceType>
+    <referenceType description="has dwc:Taxon extension">HasTaxon</referenceType>
+    <referenceType description="has dwc:Humboldt extension">HasHumboldt</referenceType>
+    <referenceType description="has dwc:EMof extension">HasEMof</referenceType>
+    <referenceType description="has dwc:Mof extension">HasMof</referenceType>
+</referenceTypes>
+
+<!--Whitelist for entity types. Please configure if you need to hide entities from the list
+<entityTypes>
+     <entityType description="">Dataset</entityType>
+     <entityType description="">Publication</entityType>
+</entityTypes> -->
+</config>
