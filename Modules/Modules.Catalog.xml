@@ -11,4 +11,5 @@
   <Module id="vim" status="active" order="7" />
   <Module id="mmm" status="active" order="8" />
   <Module id="smm" status="active" order="9" />
+  <Module id="pum" status="active" order="10" />
 </Modules>
