@@ -1,0 +1,26 @@
+<mapping name="Extension">
+  <header>
+    <destination namespaceUri="" prefix="" sequence="" xPath="Metadata" />
+    <attributes />
+    <packages />
+    <schema abbreviation="Extension" url="Metadata/Extension/BEXIS2-Extension.xsd" />
+  </header>
+  <routes>
+    <route>
+      <source xPath="metadata/title" />
+      <destination xPath="Metadata/metadata/title/titleType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/description" />
+      <destination xPath="Metadata/metadata/description/descriptionType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/creator" />
+      <destination xPath="Metadata/metadata/creator/creatorType" sequence="metadata" />
+    </route>
+    <route>
+      <source xPath="metadata/date" />
+      <destination xPath="Metadata/metadata/date/dateType" sequence="metadata" />
+    </route>
+  </routes>
+</mapping>
