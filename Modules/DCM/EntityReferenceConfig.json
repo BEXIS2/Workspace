@@ -55,31 +55,31 @@
       "category": "collection"
      },
      {
-      "description": "has dwc:Occurrence extension",
+      "description": "current dataset has a DwC Occurrence extension (has dwc:Occurrence extension)",
       "referenceType": "HasOccurrence",
       "linkType": "extension",
       "category": "extension"
      },
      {
-      "description": "has dwc:Event extension",
+      "description": "current dataset has a DwC Event extension (has dwc:Event extension)",
       "referenceType": "HasEvent",
       "linkType": "extension",
       "category": "extension"
      },
      {
-      "description": "has dwc:Taxon extension",
+      "description": "current dataset has a DwC Taxon extension (has dwc:Taxon extension)",
       "referenceType": "HasTaxon",
       "linkType": "extension",
       "category": "extension"
      },
      {
-      "description": "has dwc:Humboldt extension",
+      "description": "current dataset has a DwC Humboldt extension (has dwc:Humboldt extension)",
       "referenceType": "HasHumboldt",
       "linkType": "extension",
       "category": "extension"
      },
      {
-      "description": "has dwc:EMof extension",
+      "description": "current dataset has a DwC EMof extension (has dwc:EMof extension)",
       "referenceType": "HasEMof",
       "linkType": "extension",
       "category": "extension"
