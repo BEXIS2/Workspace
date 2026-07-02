@@ -50,7 +50,13 @@
      },
      {
       "description": "dataset is part of a collection (Collection)",
-      "referenceType": "Collection",
+      "referenceType": "IsPartOf",
+      "linkType": "hierachy",
+      "category": "collection"
+     },
+    {
+      "description": "dataset is a collection (Collection)",
+      "referenceType": "HasPart",
       "linkType": "hierachy",
       "category": "collection"
      },
