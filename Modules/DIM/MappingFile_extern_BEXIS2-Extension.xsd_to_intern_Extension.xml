@@ -8,19 +8,19 @@
   <routes>
     <route>
       <source xPath="metadata/title" />
-      <destination xPath="Metadata/metadata/title/titleType" sequence="metadata" />
+      <destination xPath="Metadata/metadata/title/titleXmlSchemaComplexType" sequence="metadata" />
     </route>
     <route>
       <source xPath="metadata/description" />
-      <destination xPath="Metadata/metadata/description/descriptionType" sequence="metadata" />
+      <destination xPath="Metadata/metadata/description/descriptionXmlSchemaComplexType" sequence="metadata" />
     </route>
     <route>
       <source xPath="metadata/creator" />
-      <destination xPath="Metadata/metadata/creator/creatorType" sequence="metadata" />
+      <destination xPath="Metadata/metadata/creator/creatorXmlSchemaComplexType" sequence="metadata" />
     </route>
     <route>
       <source xPath="metadata/date" />
-      <destination xPath="Metadata/metadata/date/dateType" sequence="metadata" />
+      <destination xPath="Metadata/metadata/date/dateDatatype_date" sequence="metadata" />
     </route>
   </routes>
 </mapping>
