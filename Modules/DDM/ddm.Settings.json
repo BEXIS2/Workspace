@@ -1,115 +1,108 @@
 {
-    "id": "ddm",
-    "name": "Data Discovery",
-    "description": "...",
-    "entries": [
-        {
-            "key": "check_public_metadata",
-            "title": "Check public metadata for not-logged in users",
-            "value": false,
-            "type": "Boolean",
-            "description": "If set to true, the metadata of non-public datasets will also be visible to non-logged-in users, in addition to the metadata of public datasets."
-        },
-        {
-            "key": "reduce_versions_select_logged_in",
-            "title": "Reduce versions select for logged in users",
-            "value": true,
-            "type": "Boolean",
-            "description": "If set to true, logged-in users will only see major and minor versions of a dataset instead of all versions."
-        },
-        {
-            "key": "restrict_latest_version_logged_in",
-            "title": "Restrict to latest version for logged in users",
-            "value": false,
-            "type": "Boolean",
-            "description": "If set to true, logged-in users will only see the newest version of a dataset instead of all versions."
-        },
-        {
-            "key": "use_tags",
-            "title": "Activate tags to summarize versions",
-            "value": false,
-            "type": "Boolean",
-            "description": "If set to true, using tags is enabled to define a combination of versions."
-        },
-        {
-            "key": "use_minor",
-            "title": "Use minor tags",
-            "value": false,
-            "type": "Boolean",
-            "description": "If set to true, the minor version tag can be assigned to dataset versions to display changes in more detail."
-        },
-        {
-            "key": "curator_required_for_tags",
-            "title": "Manage release tags requires curator",
-            "value": false,
-            "type": "Boolean",
-            "description": "If set to true, only curators can edit and set tags. Users can only send a request."
-        },
-        {
-            "key": "search_result_presentation",
-            "title": "Search Result Presentation",
-            "value": "table",
-            "description": "Select the initial display format for all user search results across the system. This setting establishes the global baseline for result presentation.",
-            "type": "String",
-            "options": [
-                "table",
-                "cards"
-            ]
-        },
-        {
-            "key": "data_aggreement",
-            "title": "Data Aggreement by download",
-            "value": "none",
-            "description": "Set up  if user need to aggree the data aggreements before download and where the aggreement is writen.",
-            "type": "String",
-            "options": [
-                "none",
-                "data policy",
-                "terms and conditions"
-            ]
-        },
-        {
-            "key": "citationSettings",
-            "title": "settings for citations",
-            "options": [],
-            "type": "JSON",
-            "value": {
-                "numberOfAuthors": 0,
-                "showCitation": true,
-                "defaultViewCitationFormat": "Text",
-                "viewCitationFormats": [
-                    "Text",
-                    "APA"
-                ],
-                "downloadCitationFormats": [
-                    "Text",
-                    "APA",
-                    "RIS",
-                    "BibTex"
-                ]
-            }
-        },
-        {
-            "key": "curatorsGroupName",
-            "title": "Group name for curators",
-            "value": "curator",
-            "type": "String",
-            "description": "Group name all curators assigned to. This is needed for the curation tool to know who is curator.",
-            "apiSource": "groups"
-        },
-        {
-            "key": "curation",
-            "title": "Configuration Settings for Curation",
-            "value": {
-                "curationLabels": [
-                    {
-                        "name": "custom-label-1",
-                        "color": "#ff0000"
-                    }
-                ]
-            },
-            "type": "JSON",
-            "description": "Customize the labels that can be used in the curation. \nExample: \"curationLabels\": [ { \"name\": \"custom-label-1\", \"color\": \"#ff0000\" }, ... ]"
-        }
-    ]
+  "id": "ddm",
+  "name": "Data Discovery",
+  "description": "...",
+  "entries": [
+    {
+      "key": "check_public_metadata",
+      "title": "Check public metadata for not-logged in users",
+      "value": false,
+      "type": "Boolean",
+      "description": "If set to true, the metadata of non-public datasets will also be visible to non-logged-in users, in addition to the metadata of public datasets."
+    },
+    {
+      "key": "reduce_versions_select_logged_in",
+      "title": "Reduce versions select for logged in users",
+      "value": true,
+      "type": "Boolean",
+      "description": "If set to true, logged-in users will only see major and minor versions of a dataset instead of all versions."
+    },
+    {
+      "key": "restrict_latest_version_logged_in",
+      "title": "Restrict to latest version for logged in users",
+      "value": false,
+      "type": "Boolean",
+      "description": "If set to true, logged-in users will only see the newest version of a dataset instead of all versions."
+    },
+    {
+      "key": "use_tags",
+      "title": "Activate tags to summarize versions",
+      "value": false,
+      "type": "Boolean",
+      "description": "If set to true, using tags is enabled to define a combination of versions."
+    },
+    {
+      "key": "use_minor",
+      "title": "Use minor tags",
+      "value": false,
+      "type": "Boolean",
+      "description": "If set to true, the minor version tag can be assigned to dataset versions to display changes in more detail."
+    },
+    {
+      "key": "curator_required_for_tags",
+      "title": "Manage release tags requires curator",
+      "value": false,
+      "type": "Boolean",
+      "description": "If set to true, only curators can edit and set tags. Users can only send a request."
+    },
+    {
+      "key": "search_result_presentation",
+      "title": "Search Result Presentation",
+      "value": "table",
+      "description": "Select the initial display format for all user search results across the system. This setting establishes the global baseline for result presentation.",
+      "type": "String",
+      "options": [
+        "table",
+        "cards"
+      ]
+    },
+    {
+      "key": "data_aggreement",
+      "title": "Data Aggreement by download",
+      "value": "none",
+      "description": "Set up  if user need to aggree the data aggreements before download and where the aggreement is writen.",
+      "type": "String",
+      "options": [
+        "none",
+        "data policy",
+        "terms and conditions"
+      ]
+    },
+    {
+      "key": "citationSettings",
+      "title": "settings for citations",
+      "options": [],
+      "type": "JSON",
+      "value": {
+        "numberOfAuthors": 0,
+        "showCitation": true,
+        "defaultViewCitationFormat": "Text",
+        "viewCitationFormats": [ "Text", "APA" ],
+        "downloadCitationFormats": [ "Text", "APA", "RIS", "BibTex" ]
+      }
+    },
+    {
+      "key": "curatorsGroupName",
+      "title": "Group name for curators",
+      "value": "datamanagers",
+      "type": "String",
+      "description": "Group name all curators assigned to. This is needed for the curation tool to know who is curator.",
+      "apiSource": "groups"
+    },
+    {
+      "key": "curation",
+      "title": "Configuration Settings for Curation",
+      "value": {
+        "curationLabels": [
+          {
+            "name": "custom-label-1",
+            "color": "#ff0000"
+          }
+        ]
+      },
+      "type": "JSON",
+      "description": "Customize the labels that can be used in the curation. \nExample: \"curationLabels\": [ { \"name\": \"custom-label-1\", \"color\": \"#ff0000\" }, ... ]"
+    }
+
+  ]
 }
