@@ -3,7 +3,7 @@
 <!DOCTYPE hibernate-mapping [ <!ENTITY BaseEntityProperties SYSTEM "..\BaseEntityProperties.xml"> ]>
 -->
 
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Vaiona.Entities" namespace="Vaiona.Entities.Security">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BEXIS2.DB.Entities" namespace="BEXIS2.DB.Entities.Security">
   <class xmlns="urn:nhibernate-mapping-2.2" name="AccessRuleEntity" table="AccessRules">
 
     <!-- Mapping BaseEntity properties -->
@@ -24,7 +24,7 @@
       <column name="SecurityKey" />
     </property>
 
-    <property name="SecurityObjectType" type="Vaiona.Entities.Security.SecurityObjectType, Vaiona.Entities">
+    <property name="SecurityObjectType" type="BEXIS2.DB.Entities.Security.SecurityObjectType, BEXIS2.DB.Entities">
       <column name="SecurityObjectType" />
     </property>
 
@@ -45,7 +45,7 @@
   </class>
 
   <sql-query name="GetRuleWithParents">
-    <return alias="accessRuleEntity" class="Vaiona.Entities.Security.AccessRuleEntity" />
+    <return alias="accessRuleEntity" class="BEXIS2.DB.Entities.Security.AccessRuleEntity" />
     WITH RulePathUp (Id, Parentref, lv)
     AS (
     -- Anchor
