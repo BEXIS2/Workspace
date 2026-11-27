@@ -1,4 +1,4 @@
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BExIS.Dlm.Entities" namespace="BExIS.Dlm.Entities.MetadataStructure">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BEXIS2.Dlm.Entities" namespace="BEXIS2.Dlm.Entities.MetadataStructure">
   <class xmlns="urn:nhibernate-mapping-2.2" name="MetadataNestedAttributeUsage" table="MetadataNestedAttributeUsages" dynamic-update="true">
     <!-- Mapping BaseEntity properties -->
 
@@ -11,7 +11,7 @@
       <column name="VersionNo" />
     </version>
 
-    <property name="Extra" type="System.Xml.XmlDocument, System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <property name="Extra" type="XmlDoc">
       <column name="Extra" not-null="false" sql-type="xml" />
     </property>
 

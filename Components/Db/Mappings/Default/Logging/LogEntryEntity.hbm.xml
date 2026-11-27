@@ -1,4 +1,4 @@
-<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="Vaiona.Entities" namespace="Vaiona.Entities.Logging">
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" assembly="BEXIS2.DB.Entities" namespace="BEXIS2.DB.Entities.Logging">
   <class xmlns="urn:nhibernate-mapping-2.2" name="LogEntry" table="LogEntries" dynamic-update="true">
 
     <!-- Mapping BaseEntity properties -->
@@ -37,7 +37,7 @@
       <column name="Environemt"  sql-type="varchar(1000)" />
     </property>
 
-    <property name="LogType" type="Vaiona.Entities.Logging.LogType, Vaiona.Entities">
+    <property name="LogType" type="BEXIS2.DB.Entities.Logging.LogType, BEXIS2.DB.Entities">
       <column name="LogType" />
     </property>
 
