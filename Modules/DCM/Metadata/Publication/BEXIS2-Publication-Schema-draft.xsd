@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <xs:schema targetNamespace="http://tempuri.org/XMLSchema.xsd"
     elementFormDefault="qualified"
     xmlns="http://tempuri.org/XMLSchema.xsd"
@@ -39,23 +39,19 @@
 					<xs:documentation>Title of the Publication</xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Abstract" maxOccurs="unbounded">
-						<xs:simpleType>
-										<xs:annotation>
+			<xs:element name="Abstract"
+						type="xs:string">
+				<xs:annotation>
 					<xs:documentation>Abstract of the Publication</xs:documentation>
 				</xs:annotation>
-						<xs:restriction base="xs:string">
-							<xs:maxLength value="10000" />
-						</xs:restriction>
-						</xs:simpleType>
 			</xs:element>
-			<xs:element name="Author"
-						type="xs:string" maxOccurs="unbounded">
+			<xs:element name="Authors" minOccurs="1" maxOccurs="unbounded"
+						type="xs:string">
 				<xs:annotation>
 					<xs:documentation></xs:documentation>
 				</xs:annotation>
 			</xs:element>
-			<xs:element name="Affiliations"
+			<xs:element name="Affiliations" minOccurs="1" maxOccurs="unbounded"
 						type="xs:string">
 				<xs:annotation>
 					<xs:documentation></xs:documentation>
@@ -139,8 +135,8 @@
 				</xs:annotation>
 			</xs:element>
 
-			<xs:element name="Recourses" minOccurs="0"
-						type="recourses">
+			<xs:element name="Resource" minOccurs="0"
+						type="resource">
 				<xs:annotation>
 					<xs:documentation></xs:documentation>
 				</xs:annotation>
@@ -194,9 +190,23 @@
 				</xs:annotation>
 			</xs:element>
 
+			<xs:element name="Publisher"
+						type="xs:string">
+				<xs:annotation>
+					<xs:documentation>Name of Publisher</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
 			<xs:element name="Language"
 						type="xs:string" minOccurs="0">
 				<!--This fiel is relevant for objects from the class Documents (Article, book, patent etc.)-->
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
+
+			<xs:element name="Accession_Number"
+						type="xs:string" minOccurs="0">
 				<xs:annotation>
 					<xs:documentation></xs:documentation>
 				</xs:annotation>
@@ -324,8 +334,14 @@
 		</xs:sequence>
 	</xs:complexType>
 
-	<xs:complexType name="recourses">
+	<xs:complexType name="resource">
 		<xs:sequence>
+			<xs:element name="has_data" minOccurs="0"
+								type="yesNoUnknown">
+				<xs:annotation>
+					<xs:documentation></xs:documentation>
+				</xs:annotation>
+			</xs:element>
 			<xs:element name="data_availability" minOccurs="0"
 								type="xs:boolean">
 				<xs:annotation>
@@ -455,6 +471,14 @@
       <xs:enumeration value="tpye 6"/>
     </xs:restriction>
   </xs:simpleType>
+
+	<xs:simpleType name="yesNoUnknown">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="yes"/>
+			<xs:enumeration value="no"/>
+			<xs:enumeration value="unknown"/>
+		</xs:restriction>
+	</xs:simpleType>
 
 	<xs:simpleType name="resourcesType">
 		<xs:restriction base="xs:string">

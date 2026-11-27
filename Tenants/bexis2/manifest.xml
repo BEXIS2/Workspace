@@ -26,6 +26,7 @@
 	<AllowedFileExtensions>.avi,.bmp,.csv,.dbf,.doc,.docx,.gif,.jpg,.jpeg,.mp3,.mp4,.pdf,.png,.r,.shp,.shx,.tif,.txt,.xls,.xlsm,.xlsx,.xsd,.zip</AllowedFileExtensions> <!-- starts with point, comma separated, no spaces -->
 	<MaximumUploadSize>1024</MaximumUploadSize> <!--In MB-->
 	<Resources>
-		<Resource key="biglogo" id="Logo_BEXIS_cmyk.svg" contentType="Image"></Resource> <!-- contentType is one of: Image, Theme, Conent-->
+		<Resource key="biglogo" id="Logo_BEXIS_cmyk.svg" contentType="image"></Resource> <!-- contentType is one of: image, theme, conent-->
+		<Resource key="terms" id="terms.txt" contentType="content"></Resource> <!-- contentType is one of: Image, Theme, Conent-->
 	</Resources>
 </Tenant>

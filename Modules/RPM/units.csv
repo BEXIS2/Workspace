@@ -76,7 +76,6 @@ per square metre;1/m^2;quantity per area unit (base unit);per area;Metric;Intege
 per cubic metre;1/m^3;quantity per volume unit (base unit);per volume;Metric;Integer,Floating Point Number;attribute or variable;1;
 per kilogram;1/kg;quantity per mass unit (base unit);per mass;Metric;Integer,Floating Point Number;attribute or variable;1;
 per gram;1/g;quantity per mass unit;per mass;Metric;Integer,Floating Point Number;attribute or variable;1;
-percentage;%;percentage unit;dimensionless;Metric;Integer,Floating Point Number;attribute or variable;1;
 promille;‰;promille unit;dimensionless;Metric;Integer,Floating Point Number;attribute or variable;1;
 volume ratio;m^3/m^3;volume ratio unit;volume ratio;Metric;Integer,Floating Point Number;attribute or variable;1;
 area ratio;m^2/m^2;area ratio unit;area ratio;Metric;Integer,Floating Point Number;attribute or variable;1;
